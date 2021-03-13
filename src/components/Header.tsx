@@ -1,6 +1,7 @@
 import React from 'react';
 import { fade } from '@material-ui/core/styles';
 import { Search, AccountCircle } from '@material-ui/icons';
+import { Link } from 'react-router-dom';
 import {
   AppBar,
   Toolbar,
@@ -44,6 +45,11 @@ ${theme.breakpoints.up('sm')} {
 `}
 `;
 
+const StyledLink = styled(Link)`
+  color: #fff;
+  text-decoration: none;
+`;
+
 export const Header: React.FC = () => {
   return (
     <AppBar position="static">
@@ -63,9 +69,11 @@ export const Header: React.FC = () => {
             alignItems="center"
             wrap="nowrap"
           >
-            <Typography variant="h6" noWrap>
-              Travel-app
-            </Typography>
+            <StyledLink to="/">
+              <Typography variant="h6" noWrap>
+                Travel-app
+              </Typography>
+            </StyledLink>
             <StyledGrid>
               <Search style={{ pointerEvents: 'none', padding: '0 5px' }} />
               <StyledInputBase
