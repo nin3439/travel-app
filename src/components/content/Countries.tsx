@@ -6,9 +6,9 @@ import { Grid, Card, CardContent, Typography } from '@material-ui/core';
 export const Countries: React.FC = () => {
   return (
     <Grid container direction="row" justify="center" alignItems="center">
-      {mockCountries.map((country: any) => {
+      {mockCountries.map((country: any, index: number) => {
         return (
-          <Link to={`/${country.country}`}>
+          <Link to={`/${country.country}`} key={index}>
             <Card style={{ margin: '10px', width: '20vw', height: '25vh' }}>
               <CardContent>
                 <img

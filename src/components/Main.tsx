@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Grid } from '@material-ui/core';
 import { Header } from './Header';
 import { Countries } from '../components/content/Countries';
+import { Country } from '../components/content/Country/Country';
 import { Footer } from './Footer';
 
 export const Main: React.FC = () => {
@@ -21,7 +22,7 @@ export const Main: React.FC = () => {
               <Countries />
             </Route>
             <Route path="/:string">
-              <div>country</div>
+              <Country />
             </Route>
           </Switch>
         </Grid>
