@@ -1,4 +1,4 @@
-const placeItaly = {
+const placesItaly = {
   colosseum: {
     photoUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg/1280px-Colosseum_in_Rome%2C_Italy_-_April_2007.jpg',
@@ -109,7 +109,7 @@ const placeItaly = {
   },
 };
 
-const placeFrance = {
+const placesFrance = {
   eiffelTower: {
     photoUrl:
       'https://ru.wikipedia.org/wiki/%D0%AD%D0%B9%D1%84%D0%B5%D0%BB%D0%B5%D0%B2%D0%B0_%D0%B1%D0%B0%D1%88%D0%BD%D1%8F#/media/%D0%A4%D0%B0%D0%B9%D0%BB:Lightning_striking_the_Eiffel_Tower_-_NOAA.jpg',
@@ -220,7 +220,7 @@ const placeFrance = {
   },
 };
 
-const placeRussia = {
+const placesRussia = {
   moscowKremlin: {
     photoUrl:
       'https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%9A%D1%80%D0%B5%D0%BC%D0%BB%D1%8C#/media/%D0%A4%D0%B0%D0%B9%D0%BB:Moscow_Kremlin_and_Bolshoy_Kamenny_Bridge_late_evening_01.JPG',
@@ -331,7 +331,7 @@ const placeRussia = {
   },
 };
 
-const placeChina = {
+const placesChina = {
   forbiddenCity: {
     photoUrl:
       'https://en.wikipedia.org/wiki/Forbidden_City#/media/File:The_Forbidden_City_-_View_from_Coal_Hill.jpg',
@@ -442,7 +442,7 @@ const placeChina = {
   },
 };
 
-const placeJapan = {
+const placesJapan = {
   himejiCastle: {
     photoUrl:
       'https://en.wikipedia.org/wiki/Himeji_Castle#/media/File:Himeji_castle_in_may_2015.jpg',
@@ -553,7 +553,7 @@ const placeJapan = {
   },
 };
 
-const placeUsa = {
+const placesUsa = {
   yellowstone: {
     photoUrl:
       'https://en.wikipedia.org/wiki/Yellowstone_National_Park#/media/File:YellowstonefallJUN05.JPG',
@@ -664,7 +664,7 @@ const placeUsa = {
   },
 };
 
-const placeEgypt = {
+const placesEgypt = {
   thebanNecropolis: {
     photoUrl:
       'https://en.wikipedia.org/wiki/Theban_Necropolis#/media/File:SFEC_AEH_-ThebesNecropolis-2010-FULL-Overview-039.jpg',
@@ -775,7 +775,7 @@ const placeEgypt = {
   },
 };
 
-const placeUk = {
+const placesUk = {
   giantsCauseway: {
     photoUrl:
       'https://en.wikipedia.org/wiki/Giant%27s_Causeway#/media/File:Causeway-code_poet-4.jpg',
@@ -886,7 +886,7 @@ const placeUk = {
   },
 };
 
-const placeTurkey = {
+const placesTurkey = {
   istanbul: {
     photoUrl:
       'https://en.wikipedia.org/wiki/Istanbul#/media/File:Istanbul_Fatih_Sultan_Mehmet_Bridge_IMG_7247_1725.jpg',
@@ -998,13 +998,13 @@ const placeTurkey = {
 };
 
 export {
-  placeItaly,
-  placeFrance,
-  placeRussia,
-  placeChina,
-  placeJapan,
-  placeUsa,
-  placeEgypt,
-  placeUk,
-  placeTurkey,
+  placesItaly,
+  placesFrance,
+  placesRussia,
+  placesChina,
+  placesJapan,
+  placesUsa,
+  placesEgypt,
+  placesUk,
+  placesTurkey,
 };

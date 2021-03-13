@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Grid } from '@material-ui/core';
 import { Header } from './Header';
+import { Countries } from '../components/content/Countries';
 import { Footer } from './Footer';
 
 export const Main: React.FC = () => {
@@ -14,16 +15,16 @@ export const Main: React.FC = () => {
         alignItems="center"
       >
         <Header />
-        <div style={{ minHeight: 'calc(100vh - 128px)' }}>
+        <Grid style={{ minHeight: 'calc(100vh - 128px)' }}>
           <Switch>
             <Route exact path="/">
-              <div>countries</div>
+              <Countries />
             </Route>
             <Route path="/:string">
               <div>country</div>
             </Route>
           </Switch>
-        </div>
+        </Grid>
         <Footer />
       </Grid>
     </Router>
