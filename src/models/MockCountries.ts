@@ -1,23 +1,25 @@
 import {
-  placeItaly,
-  placeFrance,
-  placeRussia,
-  placeChina,
-  placeJapan,
-  placeUsa,
-  placeEgypt,
-  placeUk,
-  placeTurkey,
-} from './Place';
+  placesItaly,
+  placesFrance,
+  placesRussia,
+  placesChina,
+  placesJapan,
+  placesUsa,
+  placesEgypt,
+  placesUk,
+  placesTurkey,
+} from './Places';
 
-const Country = {
-  italy: {
+const Countries: any = [
+  {
+    id: 'cd16166b-f20d-4e37-9513-021e97cfdf96',
+    name: 'Italy',
     capitalLocation: {
       coordinates: [12.496365, 41.902782],
       type: 'Point',
     },
     imageUrl:
-      'https://en.wikipedia.org/wiki/Italy#/media/File:Colosseum_in_Rome,_Italy_-_April_2007.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg/2560px-Colosseum_in_Rome%2C_Italy_-_April_2007.jpg',
     videoUrl: 'https://youtu.be/FlRwssZYRM0',
     currency: 'EUR',
     ISOCode: 'IT',
@@ -37,15 +39,17 @@ const Country = {
         name: 'Италия',
       },
     ],
-    placeItaly,
+    placesItaly,
   },
-  france: {
+  {
+    id: 'fcc32f88-bde8-41cc-89e7-4174cd7e8ea9',
+    name: 'France',
     capitalLocation: {
       coordinates: [2.35, 48.85],
       type: 'Point',
     },
     imageUrl:
-      'https://en.wikipedia.org/wiki/France#/media/File:La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques,_Paris_ao%C3%BBt_2014_(2).jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/1920px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg',
     videoUrl: 'https://www.youtube.com/watch?v=zTjnQ0XlAc4',
     currency: 'EUR',
     ISOCode: 'FR',
@@ -65,15 +69,17 @@ const Country = {
         name: 'Франция',
       },
     ],
-    placeFrance,
+    placesFrance,
   },
-  russia: {
+  {
+    id: '6d4c7a0d-8bd0-4f43-989e-55c253e52ef8',
+    name: 'Russia',
     capitalLocation: {
       coordinates: [37.616667, 55.75],
       type: 'Point',
     },
     imageUrl:
-      'https://commons.wikimedia.org/wiki/%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F#/media/File:Moscow_July_2011-16.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Moscow_July_2011-16.jpg/1920px-Moscow_July_2011-16.jpg',
     videoUrl: 'https://www.youtube.com/watch?v=YrNxPr4PKQo',
     currency: 'RUB',
     ISOCode: 'RU',
@@ -93,15 +99,17 @@ const Country = {
         name: 'Россия',
       },
     ],
-    placeRussia,
+    placesRussia,
   },
-  china: {
+  {
+    id: '9f14a0d1-1649-481b-9a10-f34c8c14ec65',
+    name: 'China',
     capitalLocation: {
       coordinates: [116.383333, 39.916667],
       type: 'Point',
     },
     imageUrl:
-      'https://en.wikipedia.org/wiki/China#/media/File:Pudong_Shanghai_November_2017_panorama.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Pudong_Shanghai_November_2017_panorama.jpg/2560px-Pudong_Shanghai_November_2017_panorama.jpg',
     videoUrl: 'https://www.youtube.com/watch?v=tBNkeXmq4IQ',
     currency: 'CNY',
     ISOCode: 'CN',
@@ -121,15 +129,17 @@ const Country = {
         name: 'Китай',
       },
     ],
-    placeChina,
+    placesChina,
   },
-  japan: {
+  {
+    id: 'c591d9ef-0b4e-41df-b8cd-4098784f107a',
+    name: 'Japan',
     capitalLocation: {
       coordinates: [139.766667, 35.683333],
       type: 'Point',
     },
     imageUrl:
-      'https://en.wikipedia.org/wiki/Japan#/media/File:Itsukushima_Gate.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Itsukushima_Gate.jpg/440px-Itsukushima_Gate.jpg',
     videoUrl: 'https://www.youtube.com/watch?v=CxuiFNYnEr4',
     currency: 'JPY',
     ISOCode: 'JP',
@@ -149,15 +159,17 @@ const Country = {
         name: 'Япония',
       },
     ],
-    placeJapan,
+    placesJapan,
   },
-  usa: {
+  {
+    id: 'bccdb952-9440-4021-ad57-b8bd499f4e64',
+    name: 'United States of America',
     capitalLocation: {
       coordinates: [-77.0147, 38.9101],
       type: 'Point',
     },
     imageUrl:
-      'https://en.wikipedia.org/wiki/United_States#/media/File:US_Capitol_west_side.JPG',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/US_Capitol_west_side.JPG/2560px-US_Capitol_west_side.JPG',
     videoUrl: 'https://www.youtube.com/watch?v=b7FNvq11CEw',
     currency: 'USD',
     ISOCode: 'US',
@@ -177,9 +189,11 @@ const Country = {
         name: 'Соединенные Штаты Америки',
       },
     ],
-    placeUsa,
+    placesUsa,
   },
-  egypt: {
+  {
+    id: '2cc12f75-d781-4d4f-ab13-c21ee5dd5a8e',
+    name: 'Egypt',
     capitalLocation: {
       coordinates: [31.216667, 30.033333],
       type: 'Point',
@@ -205,15 +219,17 @@ const Country = {
         name: 'Египет',
       },
     ],
-    placeEgypt,
+    placesEgypt,
   },
-  uk: {
+  {
+    id: '21f7b9ce-7812-46e4-ac76-ed5c40a487c8',
+    name: 'United Kingdom of Great Britain',
     capitalLocation: {
       coordinates: [-0.116667, 51.5],
       type: 'Point',
     },
     imageUrl:
-      'https://en.wikipedia.org/wiki/London#/media/File:Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall_(cropped).jpg ',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall_%28cropped%29.jpg/2880px-Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall_%28cropped%29.jpg',
     videoUrl: 'https://www.youtube.com/watch?v=wSHXd-K-jIk',
     currency: 'GBP',
     ISOCode: 'GB',
@@ -233,15 +249,18 @@ const Country = {
         name: 'Великобритания',
       },
     ],
-    placeUk,
+    placesUk,
   },
-  turkey: {
+  {
+    id: '365f1998-55ff-44b2-b19b-74ff2ae5bf22',
+    name: 'Turkey',
     capitalLocation: {
       coordinates: [35, 39],
       type: 'Point',
     },
     imageUrl:
-      'https://en.wikipedia.org/wiki/Turkey#/media/File:Turkey-3019_-_Hagia_Sophia_(2216460729).jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Turkey-3019_-_Hagia_Sophia_%282216460729%29.jpg/1920px-Turkey-3019_-_Hagia_Sophia_%282216460729%29.jpg',
+
     videoUrl: 'https://www.youtube.com/watch?v=r8rZQKXijb8',
     currency: 'TRY',
     ISOCode: 'TR',
@@ -261,8 +280,8 @@ const Country = {
         name: 'Турция',
       },
     ],
-    placeTurkey,
+    placesTurkey,
   },
-};
+];
 
-export default Country;
+export default Countries;
