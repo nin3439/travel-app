@@ -7,12 +7,12 @@ export const Country: React.FC = () => {
   const { params } = useRouteMatch();
   const country = mockCountries.find(
     // @ts-ignore
-    (item) => item.country === params.string
+    (item) => item.name === params.string
   );
 
   if (!country) {
     return <span>Не найдено</span>;
   }
 
-  return <Typography>{country.country} </Typography>;
+  return <Typography>{country.name} </Typography>;
 };

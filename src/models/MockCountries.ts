@@ -12,7 +12,8 @@ import {
 
 const Countries: any = [
   {
-    country: 'italy',
+    id: 'cd16166b-f20d-4e37-9513-021e97cfdf96',
+    name: 'Italy',
     capitalLocation: {
       coordinates: [12.496365, 41.902782],
       type: 'Point',
@@ -41,7 +42,8 @@ const Countries: any = [
     placesItaly,
   },
   {
-    country: 'france',
+    id: 'fcc32f88-bde8-41cc-89e7-4174cd7e8ea9',
+    name: 'France',
     capitalLocation: {
       coordinates: [2.35, 48.85],
       type: 'Point',
@@ -70,7 +72,8 @@ const Countries: any = [
     placesFrance,
   },
   {
-    country: 'russia',
+    id: '6d4c7a0d-8bd0-4f43-989e-55c253e52ef8',
+    name: 'Russia',
     capitalLocation: {
       coordinates: [37.616667, 55.75],
       type: 'Point',
@@ -99,7 +102,8 @@ const Countries: any = [
     placesRussia,
   },
   {
-    country: 'china',
+    id: '9f14a0d1-1649-481b-9a10-f34c8c14ec65',
+    name: 'China',
     capitalLocation: {
       coordinates: [116.383333, 39.916667],
       type: 'Point',
@@ -128,7 +132,8 @@ const Countries: any = [
     placesChina,
   },
   {
-    country: 'japan',
+    id: 'c591d9ef-0b4e-41df-b8cd-4098784f107a',
+    name: 'Japan',
     capitalLocation: {
       coordinates: [139.766667, 35.683333],
       type: 'Point',
@@ -157,7 +162,8 @@ const Countries: any = [
     placesJapan,
   },
   {
-    country: 'usa',
+    id: 'bccdb952-9440-4021-ad57-b8bd499f4e64',
+    name: 'United States of America',
     capitalLocation: {
       coordinates: [-77.0147, 38.9101],
       type: 'Point',
@@ -186,7 +192,8 @@ const Countries: any = [
     placesUsa,
   },
   {
-    country: 'egypt',
+    id: '2cc12f75-d781-4d4f-ab13-c21ee5dd5a8e',
+    name: 'Egypt',
     capitalLocation: {
       coordinates: [31.216667, 30.033333],
       type: 'Point',
@@ -215,7 +222,8 @@ const Countries: any = [
     placesEgypt,
   },
   {
-    country: 'uk',
+    id: '21f7b9ce-7812-46e4-ac76-ed5c40a487c8',
+    name: 'United Kingdom of Great Britain',
     capitalLocation: {
       coordinates: [-0.116667, 51.5],
       type: 'Point',
@@ -244,7 +252,8 @@ const Countries: any = [
     placesUk,
   },
   {
-    country: 'turkey',
+    id: '365f1998-55ff-44b2-b19b-74ff2ae5bf22',
+    name: 'Turkey',
     capitalLocation: {
       coordinates: [35, 39],
       type: 'Point',

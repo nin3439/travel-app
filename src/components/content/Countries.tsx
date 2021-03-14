@@ -8,16 +8,16 @@ export const Countries: React.FC = () => {
     <Grid container direction="row" justify="center" alignItems="center">
       {mockCountries.map((country: any, index: number) => {
         return (
-          <Link to={`/${country.country}`} key={index}>
+          <Link to={`/${country.name}`} key={index}>
             <Card style={{ margin: '10px', width: '20vw', height: '25vh' }}>
               <CardContent>
                 <img
                   src={`${country.imageUrl}`}
-                  alt={`${country.country}`}
-                  width="150vw"
+                  alt={`${country.name}`}
+                  width="200vw"
                   height="100vh"
                 />
-                <Typography>{country.country.toUpperCase()}</Typography>
+                <Typography>{country.name.toUpperCase()}</Typography>
               </CardContent>
             </Card>
           </Link>

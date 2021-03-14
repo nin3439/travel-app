@@ -1,5 +1,7 @@
-const placesItaly = {
-  colosseum: {
+const placesItaly = [
+  {
+    id: 'e9311f52-d389-46be-8305-22df2285dfc9',
+    name: 'Colosseum',
     photoUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg/1280px-Colosseum_in_Rome%2C_Italy_-_April_2007.jpg',
     localizations: [
@@ -16,8 +18,11 @@ const placesItaly = {
         name: 'Колизей',
       },
     ],
+    rating: 0,
   },
-  cinqueTerre: {
+  {
+    id: '1569a764-cc38-49ef-91e6-e0d7c8e6638a',
+    name: 'Cinque Terre',
     photoUrl:
       'https://en.wikipedia.org/wiki/Cinque_Terre#/media/File:1_manarola_evening_2012.jpg',
     localizations: [
@@ -34,8 +39,11 @@ const placesItaly = {
         name: 'Чинкве-Терре',
       },
     ],
+    rating: 0,
   },
-  pompeii: {
+  {
+    id: '7d9bd58f-d833-4f37-bf6b-d57ff87930ee',
+    name: 'Pompeii',
     photoUrl:
       'https://it.wikipedia.org/wiki/Pompei_antica#/media/File:S03_06_01_024_image_3141.jpg',
     localizations: [
@@ -52,8 +60,11 @@ const placesItaly = {
         name: 'Помпеи',
       },
     ],
+    rating: 0,
   },
-  towerOfPiza: {
+  {
+    id: '4e8b8b22-85ce-434f-b273-40f14f02d480',
+    name: 'Leaning Tower of Pisa',
     photoUrl:
       'https://en.wikipedia.org/wiki/Leaning_Tower_of_Pisa#/media/File:Leaning_Tower_of_Pisa_in_the_1890s.jpg',
     localizations: [
@@ -70,8 +81,11 @@ const placesItaly = {
         name: 'Пизанская башня',
       },
     ],
+    rating: 0,
   },
-  etna: {
+  {
+    id: '81b7d2bb-1c1a-42a9-818b-c0a79830b054',
+    name: 'Mount Etna ',
     photoUrl:
       'https://en.wikipedia.org/wiki/Mount_Etna#/media/File:Mt_Etna_and_Catania1.jpg',
     localizations: [
@@ -88,8 +102,11 @@ const placesItaly = {
         name: 'Вулкан Этна',
       },
     ],
+    rating: 0,
   },
-  petersSquare: {
+  {
+    id: '4a945e36-1ef8-4cc8-88d4-e521f20fab25',
+    name: "St. Peter's Square i",
     photoUrl:
       "https://en.wikipedia.org/wiki/St._Peter%27s_Square#/media/File:St_Peter's_Square,_Vatican_City_-_April_2007.jpg",
     localizations: [
@@ -106,11 +123,15 @@ const placesItaly = {
         name: 'Площадь Святого Петра',
       },
     ],
+    rating: 0,
   },
-};
+];
 
-const placesFrance = {
-  eiffelTower: {
+const placesFrance = [
+  {
+    id: 'b69090dc-adc8-4d76-8d16-bbbc7c4487de',
+    name: 'Eiffel Tower',
+    rating: 0,
     photoUrl:
       'https://ru.wikipedia.org/wiki/%D0%AD%D0%B9%D1%84%D0%B5%D0%BB%D0%B5%D0%B2%D0%B0_%D0%B1%D0%B0%D1%88%D0%BD%D1%8F#/media/%D0%A4%D0%B0%D0%B9%D0%BB:Lightning_striking_the_Eiffel_Tower_-_NOAA.jpg',
     localizations: [
@@ -128,7 +149,10 @@ const placesFrance = {
       },
     ],
   },
-  louvre: {
+  {
+    id: '398b8a8a-9ce1-4ed0-b868-9be899eedefd',
+    name: 'Louvre',
+    rating: 0,
     photoUrl:
       'https://ru.wikipedia.org/wiki/%D0%9B%D1%83%D0%B2%D1%80#/media/%D0%A4%D0%B0%D0%B9%D0%BB:Louvre_Museum_Wikimedia_Commons.jpg',
     localizations: [
@@ -146,7 +170,10 @@ const placesFrance = {
       },
     ],
   },
-  chartresCathedral: {
+  {
+    id: '3177c2d0-111c-4b21-ae3b-7952674bf11e',
+    name: 'Chartres Cathedral',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Chartres_Cathedral#/media/File:Notre_Dame_de_Chartres.jpg',
     localizations: [
@@ -164,7 +191,10 @@ const placesFrance = {
       },
     ],
   },
-  pontDuGard: {
+  {
+    id: '4a756da4-8b7e-48f6-a916-a061063545e9',
+    name: 'Pont du Gard',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Pont_du_Gard#/media/File:Pont_du_Gard_BLS.jpg',
     localizations: [
@@ -182,7 +212,10 @@ const placesFrance = {
       },
     ],
   },
-  carcassonne: {
+  {
+    id: '4e8ac85f-5613-489b-8b87-ad90368dceea',
+    name: 'Cite de Carcassonne',
+    rating: 0,
     photoUrl:
       'https://ru.wikipedia.org/wiki/%D0%9A%D1%80%D0%B5%D0%BF%D0%BE%D1%81%D1%82%D1%8C_%D0%9A%D0%B0%D1%80%D0%BA%D0%B0%D1%81%D0%BE%D0%BD#/media/%D0%A4%D0%B0%D0%B9%D0%BB:Carcassonne-vignes.jpg',
     localizations: [
@@ -200,7 +233,10 @@ const placesFrance = {
       },
     ],
   },
-  сhauvetCave: {
+  {
+    id: '593d65dd-9f9a-418d-a396-3b8944fa9ab4',
+    name: 'Chauvet Cave',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Chauvet_Cave#/media/File:Lions_painting,_Chauvet_Cave_(museum_replica).jpg',
     localizations: [
@@ -218,10 +254,13 @@ const placesFrance = {
       },
     ],
   },
-};
+];
 
-const placesRussia = {
-  moscowKremlin: {
+const placesRussia = [
+  {
+    id: 'b4eb9253-7a49-4564-9580-bd7e402066f2',
+    name: 'Moscow Kremlin',
+    rating: 0,
     photoUrl:
       'https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%9A%D1%80%D0%B5%D0%BC%D0%BB%D1%8C#/media/%D0%A4%D0%B0%D0%B9%D0%BB:Moscow_Kremlin_and_Bolshoy_Kamenny_Bridge_late_evening_01.JPG',
     localizations: [
@@ -239,7 +278,10 @@ const placesRussia = {
       },
     ],
   },
-  virginKomiForests: {
+  {
+    id: 'cb4aeff9-4fe2-47d2-8014-31f96bfbf34c',
+    name: 'Virgin Komi Forests',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Virgin_Komi_Forests#/media/File:Four_herous01.JPG',
     localizations: [
@@ -257,7 +299,10 @@ const placesRussia = {
       },
     ],
   },
-  lakeBaikal: {
+  {
+    id: 'ec79b576-601b-444d-a935-acf0b648d9d9',
+    name: 'Lake Baikal',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Lake_Baikal#/media/File:Olkhon_2014-06-13_07-38-36_IMG_6874-36-2-2_(32577582872).jpg',
     localizations: [
@@ -275,7 +320,10 @@ const placesRussia = {
       },
     ],
   },
-  ferapontovMonastery: {
+  {
+    id: '42bad109-a011-498b-afcc-2515caa35d15',
+    name: 'Ferapontov Monastery',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Ferapontov_Monastery#/media/File:Ferapontovo_drone_cut.jpg',
     localizations: [
@@ -293,7 +341,10 @@ const placesRussia = {
       },
     ],
   },
-  lenaPillars: {
+  {
+    id: 'fdc39fb1-04cd-4189-bc97-e925605250e8',
+    name: 'Lena Pillars',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Lena_Pillars#/media/File:Lena_Pillars_20050716_16.JPG',
     localizations: [
@@ -311,7 +362,10 @@ const placesRussia = {
       },
     ],
   },
-  kizhiPogost: {
+  {
+    id: '5bbe8fcb-8b05-4e68-80ae-70024c9064d0',
+    name: 'Kizhi Pogost',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Kizhi_Pogost#/media/File:Kizhi_churches.jpg',
     localizations: [
@@ -329,10 +383,13 @@ const placesRussia = {
       },
     ],
   },
-};
+];
 
-const placesChina = {
-  forbiddenCity: {
+const placesChina = [
+  {
+    id: 'b5332fa1-83c0-4e18-8a9f-f1d798fa5b9f',
+    name: 'Forbidden City',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Forbidden_City#/media/File:The_Forbidden_City_-_View_from_Coal_Hill.jpg',
     localizations: [
@@ -350,7 +407,10 @@ const placesChina = {
       },
     ],
   },
-  terracottaArmy: {
+  {
+    id: '3118f2a5-23a7-42a2-aea4-e58fa4089d0e',
+    name: 'Terracotta Army',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Terracotta_Army#/media/File:Terracotta_Army,_View_of_Pit_1.jpg',
     localizations: [
@@ -368,7 +428,10 @@ const placesChina = {
       },
     ],
   },
-  greatWall: {
+  {
+    id: '3379681c-a6a7-4f93-b2a8-0e2cf08fa97c',
+    name: 'The Great Wall',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Great_Wall_of_China#/media/File:The_Great_Wall_of_China_at_Jinshanling-edit.jpg',
     localizations: [
@@ -386,7 +449,10 @@ const placesChina = {
       },
     ],
   },
-  templeOfHeaven: {
+  {
+    id: '90f3aeb0-ac8e-4926-af79-4f03c14ad9a0',
+    name: 'Temple of Heaven',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Temple_of_Heaven#/media/File:11_Temple_of_Heaven.jpg',
     localizations: [
@@ -404,7 +470,10 @@ const placesChina = {
       },
     ],
   },
-  mountQingcheng: {
+  {
+    id: '5b756b8f-d7eb-48ea-9c97-8923949f252a',
+    name: 'Mount Qingcheng',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Mount_Qingcheng#/media/File:QinChengHouShan_WuLongGou.jpg',
     localizations: [
@@ -422,7 +491,10 @@ const placesChina = {
       },
     ],
   },
-  pingyao: {
+  {
+    id: 'ab0431ec-9d6b-482e-b6f5-e8e9d18ec856',
+    name: 'Pingyao',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Pingyao#/media/File:PingYaoCityWall.jpg',
     localizations: [
@@ -440,10 +512,13 @@ const placesChina = {
       },
     ],
   },
-};
+];
 
-const placesJapan = {
-  himejiCastle: {
+const placesJapan = [
+  {
+    id: 'f56c6c55-7fd2-4538-a62b-9350d0c431dc',
+    name: 'Himeji Castle',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Himeji_Castle#/media/File:Himeji_castle_in_may_2015.jpg',
     localizations: [
@@ -461,7 +536,10 @@ const placesJapan = {
       },
     ],
   },
-  shirakamiSanchi: {
+  {
+    id: '0b1cc742-41c6-4a12-8ae9-82ba28742783',
+    name: 'Shirakami-Sanchi',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Shirakami-Sanchi#/media/File:Sirakami_santi.JPG',
     localizations: [
@@ -479,7 +557,10 @@ const placesJapan = {
       },
     ],
   },
-  hiroshimaPeaceMemorial: {
+  {
+    id: '1dfb398b-095c-43c5-ba89-3f1ea3df468b',
+    name: 'Hiroshima Peace Memorial',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Hiroshima_Peace_Memorial#/media/File:Genbaku_Dome04-r.JPG',
     localizations: [
@@ -497,7 +578,10 @@ const placesJapan = {
       },
     ],
   },
-  iwamiGinzanSilverMine: {
+  {
+    id: '9f3c3901-6fc6-4c94-ab18-dece7ef60a76',
+    name: 'Iwami Ginzan Silver Mine',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Iwami_Ginzan_Silver_Mine#/media/File:180504_Kamaya-mabu_of_Iwami_Ginzan_Silver_Mine_Oda_Shimane_pref_Japan01o.JPG',
     localizations: [
@@ -515,7 +599,10 @@ const placesJapan = {
       },
     ],
   },
-  mountFuji: {
+  {
+    id: 'ce3391f9-4738-45b3-8d21-51ff973a2f0f',
+    name: 'Mount Fuji',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Mount_Fuji#/media/File:MtFuji_FujiCity.jpg',
     localizations: [
@@ -533,7 +620,10 @@ const placesJapan = {
       },
     ],
   },
-  okinoshima: {
+  {
+    id: 'dae59822-f137-4c6c-8c65-2459c0be340f',
+    name: 'Okinoshima',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Okinoshima_(Fukuoka)#/media/File:Okinoshima_aerial01.jpg',
     localizations: [
@@ -551,10 +641,13 @@ const placesJapan = {
       },
     ],
   },
-};
+];
 
-const placesUsa = {
-  yellowstone: {
+const placesUsa = [
+  {
+    id: '579bcfe0-1732-4f81-af9d-5c6ac119e771',
+    name: 'Yellowstone National Park',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Yellowstone_National_Park#/media/File:YellowstonefallJUN05.JPG',
     localizations: [
@@ -572,7 +665,10 @@ const placesUsa = {
       },
     ],
   },
-  grandCanyon: {
+  {
+    id: 'afeda637-796f-4480-b3a9-97221d287cdb',
+    name: 'Grand Canyon National Park',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Grand_Canyon_National_Park#/media/File:Dawn_on_the_S_rim_of_the_Grand_Canyon_(8645178272).jpg',
     localizations: [
@@ -590,7 +686,10 @@ const placesUsa = {
       },
     ],
   },
-  statueOfLiberty: {
+  {
+    id: '29f477bf-0d0f-461d-9357-60c6c83116ea',
+    name: 'Statue of Liberty',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Statue_of_Liberty#/media/File:Lady_Liberty_under_a_blue_sky_(cropped).jpg',
     localizations: [
@@ -608,7 +707,10 @@ const placesUsa = {
       },
     ],
   },
-  carlsbadCaverns: {
+  {
+    id: 'fb288925-91fa-481e-9828-d86249e75304',
+    name: 'Carlsbad Caverns National Park',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park#/media/File:Carlsbad_Interior_Formations.jpg',
     localizations: [
@@ -626,7 +728,10 @@ const placesUsa = {
       },
     ],
   },
-  monticello: {
+  {
+    id: '93354510-61ba-4783-93a7-40a306d3abba',
+    name: 'Monticello',
+    rating: 0,
     photoUrl:
       "https://en.wikipedia.org/wiki/Monticello#/media/File:Thomas_Jefferson's_Monticello_(cropped).JPG",
     localizations: [
@@ -644,7 +749,10 @@ const placesUsa = {
       },
     ],
   },
-  taosPueblo: {
+  {
+    id: '4e918944-8a51-4272-bc3a-78ed44f824ba',
+    name: 'Taos Pueblo',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Taos_Pueblo#/media/File:Taos_Pueblo_2017-05-05.jpg',
     localizations: [
@@ -662,10 +770,13 @@ const placesUsa = {
       },
     ],
   },
-};
+];
 
-const placesEgypt = {
-  thebanNecropolis: {
+const placesEgypt = [
+  {
+    id: '5f8e2d81-2b31-4460-bc97-f3217c2c5ed4',
+    name: 'Theban Necropolis',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Theban_Necropolis#/media/File:SFEC_AEH_-ThebesNecropolis-2010-FULL-Overview-039.jpg',
     localizations: [
@@ -683,7 +794,10 @@ const placesEgypt = {
       },
     ],
   },
-  islamicCairo: {
+  {
+    id: '5491ffc1-4fe9-4d88-8eea-decbcb107e69',
+    name: 'Islamic Cairo',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Islamic_Cairo#/media/File:Islamic-cairo-street.jpg',
     localizations: [
@@ -701,7 +815,10 @@ const placesEgypt = {
       },
     ],
   },
-  saintCatherineMonastery: {
+  {
+    id: '4fb13e57-851d-461d-b091-eebd2fe0b2e4',
+    name: "Saint Catherine's Monastery",
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Saint_Catherine%27s_Monastery#/media/File:Saint_Catherine_Sinai.jpg',
     localizations: [
@@ -719,7 +836,10 @@ const placesEgypt = {
       },
     ],
   },
-  wadiElHitan: {
+  {
+    id: 'd98a6a2e-71f9-44ac-8bb0-94b242b4d5c6',
+    name: 'Wadi Al-Hitan',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Wadi_El_Hitan#/media/File:The_whales_fossils.jpg',
     localizations: [
@@ -737,7 +857,10 @@ const placesEgypt = {
       },
     ],
   },
-  abuMena: {
+  {
+    id: '7f0315f8-cc0e-44fb-aaff-62e20d8fa326',
+    name: 'Abu Mena',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Abu_Mena#/media/File:Religious_Complex_at_Abu_Mena_(XIII).jpg',
     localizations: [
@@ -755,7 +878,10 @@ const placesEgypt = {
       },
     ],
   },
-  gizaPyramid: {
+  {
+    id: 'e5377ec0-a406-40ab-95b2-a6df02268d61',
+    name: 'The Giza Pyramid Complex',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Giza_pyramid_complex#/media/File:Pyramids_of_the_Giza_Necropolis.jpg',
     localizations: [
@@ -773,10 +899,13 @@ const placesEgypt = {
       },
     ],
   },
-};
+];
 
-const placesUk = {
-  giantsCauseway: {
+const placesUk = [
+  {
+    id: '0c6609a1-791d-4de6-8874-936492247b52',
+    name: "Giant's Causeway",
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Giant%27s_Causeway#/media/File:Causeway-code_poet-4.jpg',
     localizations: [
@@ -794,7 +923,10 @@ const placesUk = {
       },
     ],
   },
-  ironbridgeGorge: {
+  {
+    id: '3c96d4ca-c00b-4b46-97bb-3fbcd692df1c',
+    name: 'Ironbridge Gorge',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Ironbridge_Gorge#/media/File:Iron_Bridge_east_side_in_February_2019.jpg',
     localizations: [
@@ -812,7 +944,10 @@ const placesUk = {
       },
     ],
   },
-  stonehenge: {
+  {
+    id: '929edcab-c426-4a44-a3db-2a51103da0c3',
+    name: 'Stonehenge',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Stonehenge#/media/File:Stonehenge2007_07_30.jpg',
     localizations: [
@@ -830,7 +965,10 @@ const placesUk = {
       },
     ],
   },
-  towerOfLondon: {
+  {
+    id: '5bf8b65a-89cf-4504-8a59-36fca0aebda5',
+    name: 'Tower of London',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Tower_of_London#/media/File:Tower_of_London_from_the_Shard_(8515883950).jpg',
     localizations: [
@@ -848,7 +986,10 @@ const placesUk = {
       },
     ],
   },
-  greenwich: {
+  {
+    id: '96fbec18-d7d3-442b-b775-d4683d25463b',
+    name: 'Greenwich',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Greenwich#/media/File:312SFEC_LONDON-20070917.JPG',
     localizations: [
@@ -866,7 +1007,10 @@ const placesUk = {
       },
     ],
   },
-  liverpool: {
+  {
+    id: '1a83462e-6a5f-43b8-b1fe-332ff35ebf25',
+    name: 'Liverpool',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Liverpool#/media/File:LpoolTownHallOM.jpg',
     localizations: [
@@ -884,10 +1028,13 @@ const placesUk = {
       },
     ],
   },
-};
+];
 
-const placesTurkey = {
-  istanbul: {
+const placesTurkey = [
+  {
+    id: '49cdd30c-278d-49cd-9333-692c135b6914',
+    name: 'Istanbul',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Istanbul#/media/File:Istanbul_Fatih_Sultan_Mehmet_Bridge_IMG_7247_1725.jpg',
     localizations: [
@@ -905,7 +1052,10 @@ const placesTurkey = {
       },
     ],
   },
-  göremeNationalPark: {
+  {
+    id: 'fda9d162-93ba-4b22-af17-c39b31bb9d2e',
+    name: 'Göreme National Park',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/G%C3%B6reme_National_Park#/media/File:G%C3%B6reme_Valley_in_Cappadocia_edit1.jpg',
     localizations: [
@@ -923,7 +1073,10 @@ const placesTurkey = {
       },
     ],
   },
-  hierapolis: {
+  {
+    id: 'cd7228fd-f7f3-4232-857e-8f32f6827d56',
+    name: 'Hierapolis',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Hierapolis#/media/File:Hierapolis_01.jpg',
     localizations: [
@@ -941,7 +1094,10 @@ const placesTurkey = {
       },
     ],
   },
-  ephesus: {
+  {
+    id: '41713c59-5fcb-4c8f-83b0-b33c11538764',
+    name: 'Ephesus',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Ephesus#/media/File:Ephesus_Celsus_Library_Fa%C3%A7ade.jpg',
     localizations: [
@@ -959,7 +1115,10 @@ const placesTurkey = {
       },
     ],
   },
-  aphrodisias: {
+  {
+    id: 'd0558de2-03d8-4125-a24c-ecd86ff972a4',
+    name: 'Aphrodisias',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Aphrodisias#/media/File:The_Temple_of_Aphrodite,_built_in_the_Ionic_order_in_stages_during_the_Roman_period_(from_1st_century_BC_to_2nd_century_AD)_and_later_converted_into_a_Christian_basilica,_Aphrodisias,_Caria,_Turkey_(19864929084).jpg',
     localizations: [
@@ -977,7 +1136,10 @@ const placesTurkey = {
       },
     ],
   },
-  troy: {
+  {
+    id: 'c59d5c2e-fbf3-45b1-bacb-cabff953fa96',
+    name: 'Troy',
+    rating: 0,
     photoUrl:
       'https://en.wikipedia.org/wiki/Troy#/media/File:Walls_of_Troy_(2).jpg',
     localizations: [
@@ -995,7 +1157,7 @@ const placesTurkey = {
       },
     ],
   },
-};
+];
 
 export {
   placesItaly,
