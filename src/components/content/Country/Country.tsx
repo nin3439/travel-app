@@ -33,21 +33,19 @@ export const Country: React.FC = () => {
         <div>Capital: {country.localizations[0].capital}</div>
         <div>{country.localizations[0].description}</div>
         <Carousel width="60vw">
-          {country.countryPlaces.map((places: any) => {
-            return (
-              <div>
-                <img
-                  src={`${places.photoUrl}`}
-                  alt={`${places.name}`}
-                  width="100vw"
-                />
-                <p className="legend">
-                  <h3>{`${places.name}`}</h3>
-                  {`${places.localizations[0].description}`}
-                </p>
-              </div>
-            );
-          })}
+          {country.countryPlaces.map(
+            ({ photoUrl, name, localizations }: any) => {
+              return (
+                <div>
+                  <img src={`${photoUrl}`} alt={`${name}`} width="100vw" />
+                  <p className="legend">
+                    <h3>{`${name}`}</h3>
+                    {`${localizations[0].description}`}
+                  </p>
+                </div>
+              );
+            }
+          )}
         </Carousel>
         <ReactPlayer url={country.videoUrl} controls={true} loop={true} />
       </Grid>
