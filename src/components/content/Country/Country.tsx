@@ -29,6 +29,7 @@ export const Country: React.FC = () => {
           style={{ border: 'solid #3f51b5 6px' }}
           width="35%"
           src={country.imageUrl}
+          alt={country.name}
         />
         <div>Capital: {country.localizations[0].capital}</div>
         <div>{country.localizations[0].description}</div>
