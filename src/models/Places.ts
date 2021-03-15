@@ -3,7 +3,7 @@ const placesItaly = [
     id: 'e9311f52-d389-46be-8305-22df2285dfc9',
     name: 'Colosseum',
     photoUrl:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg/1280px-Colosseum_in_Rome%2C_Italy_-_April_2007.jpg',
+      'https://i.pinimg.com/originals/2f/41/0f/2f410fe1933058df5a2879c5d3d24a95.jpg',
     localizations: [
       {
         lang: 'en',
@@ -24,7 +24,7 @@ const placesItaly = [
     id: '1569a764-cc38-49ef-91e6-e0d7c8e6638a',
     name: 'Cinque Terre',
     photoUrl:
-      'https://en.wikipedia.org/wiki/Cinque_Terre#/media/File:1_manarola_evening_2012.jpg',
+      'https://img.travelawaits.com/quill/3/8/2/6/a/d/3826ad5ad0776fadbcc3d27775212118dcba6ed0.jpg',
     localizations: [
       {
         lang: 'en',
@@ -44,8 +44,7 @@ const placesItaly = [
   {
     id: '7d9bd58f-d833-4f37-bf6b-d57ff87930ee',
     name: 'Pompeii',
-    photoUrl:
-      'https://it.wikipedia.org/wiki/Pompei_antica#/media/File:S03_06_01_024_image_3141.jpg',
+    photoUrl: 'https://images.wsj.net/im-222242?width=1280&size=1',
     localizations: [
       {
         lang: 'en',
@@ -64,9 +63,9 @@ const placesItaly = [
   },
   {
     id: '4e8b8b22-85ce-434f-b273-40f14f02d480',
-    name: 'Leaning Tower of Pisa',
+    name: 'Tower of Pisa',
     photoUrl:
-      'https://en.wikipedia.org/wiki/Leaning_Tower_of_Pisa#/media/File:Leaning_Tower_of_Pisa_in_the_1890s.jpg',
+      'https://literaryfictions.files.wordpress.com/2012/05/tower-of-pisa-tuscany-central-italy.jpg',
     localizations: [
       {
         lang: 'en',
@@ -85,9 +84,9 @@ const placesItaly = [
   },
   {
     id: '81b7d2bb-1c1a-42a9-818b-c0a79830b054',
-    name: 'Mount Etna ',
+    name: 'Mount Etna',
     photoUrl:
-      'https://en.wikipedia.org/wiki/Mount_Etna#/media/File:Mt_Etna_and_Catania1.jpg',
+      'https://i.guim.co.uk/img/media/d9accdd8805aa798dd4cec7c10439d7770244c56/0_176_6016_3611/master/6016.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=1ec24e81a03531ae90cdb41fd0d83d02',
     localizations: [
       {
         lang: 'en',
@@ -106,9 +105,9 @@ const placesItaly = [
   },
   {
     id: '4a945e36-1ef8-4cc8-88d4-e521f20fab25',
-    name: "St. Peter's Square i",
+    name: "St. Peter's Square",
     photoUrl:
-      "https://en.wikipedia.org/wiki/St._Peter%27s_Square#/media/File:St_Peter's_Square,_Vatican_City_-_April_2007.jpg",
+      'https://i.pinimg.com/originals/7e/2e/90/7e2e9077c14bb5f619e781b2de43aff6.jpg',
     localizations: [
       {
         lang: 'en',
@@ -119,7 +118,7 @@ const placesItaly = [
       {
         lang: 'ru',
         description:
-          'Площадь Святого Петра (итал .: Piazza San Pietro [ˈpjattsa sam ˈpjɛːtro], латин: Forum Sancti Petri) - большая площадь, расположенная прямо перед базиликой Святого Петра в Ватикане, папском анклаве в Риме, прямо к западу от окрестности (рионе) Борго. И площадь, и базилика названы в честь Святого Петра, апостола Иисуса, которого католики считают первым Папой.',
+          'Площадь Святого Петра (итал.: Piazza San Pietro [ˈpjattsa sam ˈpjɛːtro], латин: Forum Sancti Petri) - большая площадь, расположенная прямо перед базиликой Святого Петра в Ватикане, папском анклаве в Риме, прямо к западу от окрестности (рионе) Борго. И площадь, и базилика названы в честь Святого Петра, апостола Иисуса, которого католики считают первым Папой.',
         name: 'Площадь Святого Петра',
       },
     ],
@@ -133,7 +132,7 @@ const placesFrance = [
     name: 'Eiffel Tower',
     rating: 0,
     photoUrl:
-      'https://ru.wikipedia.org/wiki/%D0%AD%D0%B9%D1%84%D0%B5%D0%BB%D0%B5%D0%B2%D0%B0_%D0%B1%D0%B0%D1%88%D0%BD%D1%8F#/media/%D0%A4%D0%B0%D0%B9%D0%BB:Lightning_striking_the_Eiffel_Tower_-_NOAA.jpg',
+      'https://www.history.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTU3ODc4NjAzNTM2MTQ4MTkx/hith-eiffel-tower-istock_000016468972large-2.jpg',
     localizations: [
       {
         lang: 'en',
@@ -154,7 +153,7 @@ const placesFrance = [
     name: 'Louvre',
     rating: 0,
     photoUrl:
-      'https://ru.wikipedia.org/wiki/%D0%9B%D1%83%D0%B2%D1%80#/media/%D0%A4%D0%B0%D0%B9%D0%BB:Louvre_Museum_Wikimedia_Commons.jpg',
+      'https://www.delightfulspots.de/wp-content/uploads/2018/01/Louvre-Paris-Tipps-2020.jpg',
     localizations: [
       {
         lang: 'en',
@@ -174,8 +173,7 @@ const placesFrance = [
     id: '3177c2d0-111c-4b21-ae3b-7952674bf11e',
     name: 'Chartres Cathedral',
     rating: 0,
-    photoUrl:
-      'https://en.wikipedia.org/wiki/Chartres_Cathedral#/media/File:Notre_Dame_de_Chartres.jpg',
+    photoUrl: 'https://live.staticflickr.com/8875/18042927428_7b81dcd423_b.jpg',
     localizations: [
       {
         lang: 'en',
@@ -196,7 +194,7 @@ const placesFrance = [
     name: 'Pont du Gard',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Pont_du_Gard#/media/File:Pont_du_Gard_BLS.jpg',
+      'https://lh3.googleusercontent.com/proxy/1PwnEmt6p5uIT6nblaECJW-YswwRVum88HBL3abyvLB0vC1jh3Q0K7XgOv2zg37DPPHk7k5CAnKhzI9w-U_RAB4E4QjwAuAl7TWLEJql2SKKF5VSf5cGJYqTFZ0ZNioO7Y52X3HXhCcZVYw_QeYtAaN3FheH3AqSqfvWXIaf2Q',
     localizations: [
       {
         lang: 'en',
@@ -217,7 +215,7 @@ const placesFrance = [
     name: 'Cite de Carcassonne',
     rating: 0,
     photoUrl:
-      'https://ru.wikipedia.org/wiki/%D0%9A%D1%80%D0%B5%D0%BF%D0%BE%D1%81%D1%82%D1%8C_%D0%9A%D0%B0%D1%80%D0%BA%D0%B0%D1%81%D0%BE%D0%BD#/media/%D0%A4%D0%B0%D0%B9%D0%BB:Carcassonne-vignes.jpg',
+      'https://i.pinimg.com/originals/a9/0a/49/a90a4900fe5d6c55ca3379992ad3eea4.png',
     localizations: [
       {
         lang: 'en',
@@ -238,7 +236,7 @@ const placesFrance = [
     name: 'Chauvet Cave',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Chauvet_Cave#/media/File:Lions_painting,_Chauvet_Cave_(museum_replica).jpg',
+      'https://img.haarets.co.il/img/1.6029554/662911397.jpg?precrop=894,894,x471,y12&height=1200&width=1200',
     localizations: [
       {
         lang: 'en',
@@ -262,7 +260,7 @@ const placesRussia = [
     name: 'Moscow Kremlin',
     rating: 0,
     photoUrl:
-      'https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%9A%D1%80%D0%B5%D0%BC%D0%BB%D1%8C#/media/%D0%A4%D0%B0%D0%B9%D0%BB:Moscow_Kremlin_and_Bolshoy_Kamenny_Bridge_late_evening_01.JPG',
+      'https://www.tripsavvy.com/thmb/vAEE51wuFR4gBQuPVLYzsjzJPJU=/853x853/smart/filters:no_upscale()/116249935-56a3a0693df78cf7727e4359-eec97e8242194be2a7b5833842040b43.jpg',
     localizations: [
       {
         lang: 'en',
@@ -283,7 +281,7 @@ const placesRussia = [
     name: 'Virgin Komi Forests',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Virgin_Komi_Forests#/media/File:Four_herous01.JPG',
+      'https://i.pinimg.com/originals/0a/79/40/0a79401f1bab55bd57d428c9cd75333d.jpg',
     localizations: [
       {
         lang: 'en',
@@ -304,7 +302,7 @@ const placesRussia = [
     name: 'Lake Baikal',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Lake_Baikal#/media/File:Olkhon_2014-06-13_07-38-36_IMG_6874-36-2-2_(32577582872).jpg',
+      'https://images.theconversation.com/files/252656/original/file-20190107-32133-6lq46u.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop',
     localizations: [
       {
         lang: 'en',
@@ -325,7 +323,7 @@ const placesRussia = [
     name: 'Ferapontov Monastery',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Ferapontov_Monastery#/media/File:Ferapontovo_drone_cut.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/0/0b/Ferapontovo_drone_cut.jpg',
     localizations: [
       {
         lang: 'en',
@@ -345,8 +343,7 @@ const placesRussia = [
     id: 'fdc39fb1-04cd-4189-bc97-e925605250e8',
     name: 'Lena Pillars',
     rating: 0,
-    photoUrl:
-      'https://en.wikipedia.org/wiki/Lena_Pillars#/media/File:Lena_Pillars_20050716_16.JPG',
+    photoUrl: 'https://pbs.twimg.com/media/EtPtlRvXUAAFHQG.jpg',
     localizations: [
       {
         lang: 'en',
@@ -367,7 +364,7 @@ const placesRussia = [
     name: 'Kizhi Pogost',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Kizhi_Pogost#/media/File:Kizhi_churches.jpg',
+      'https://img.travelawaits.com/quill/0/5/7/e/2/f/057e2f79f4ee9ecb89e98057631ea71972022294.jpg',
     localizations: [
       {
         lang: 'en',
@@ -391,7 +388,7 @@ const placesChina = [
     name: 'Forbidden City',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Forbidden_City#/media/File:The_Forbidden_City_-_View_from_Coal_Hill.jpg',
+      'https://img.static-kl.com/images/media/2D7B9FBC-5EBE-4B3C-9586786A6C1ABD4E?aspect_ratio=1:1&min_width=912',
     localizations: [
       {
         lang: 'en',
@@ -412,7 +409,7 @@ const placesChina = [
     name: 'Terracotta Army',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Terracotta_Army#/media/File:Terracotta_Army,_View_of_Pit_1.jpg',
+      'https://i.guim.co.uk/img/media/1b74e3978d50ca8faad9f1b463c3e2c28a823898/0_232_2129_1277/master/2129.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=df3344d1460af1922a958fe5e578dbfd',
     localizations: [
       {
         lang: 'en',
@@ -433,7 +430,7 @@ const placesChina = [
     name: 'The Great Wall',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Great_Wall_of_China#/media/File:The_Great_Wall_of_China_at_Jinshanling-edit.jpg',
+      'https://media.nationalgeographic.org/assets/photos/310/436/e98bf54c-f84b-4a8c-81a6-ae66279cd62d.jpg',
     localizations: [
       {
         lang: 'en',
@@ -454,7 +451,7 @@ const placesChina = [
     name: 'Temple of Heaven',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Temple_of_Heaven#/media/File:11_Temple_of_Heaven.jpg',
+      'https://i.pinimg.com/originals/ae/88/1a/ae881a3b779c01b6fbcfe8e324cfa87d.jpg',
     localizations: [
       {
         lang: 'en',
@@ -475,7 +472,7 @@ const placesChina = [
     name: 'Mount Qingcheng',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Mount_Qingcheng#/media/File:QinChengHouShan_WuLongGou.jpg',
+      'https://media-cdn.tripadvisor.com/media/photo-m/1280/14/63/74/22/photo8jpg.jpg',
     localizations: [
       {
         lang: 'en',
@@ -496,7 +493,7 @@ const placesChina = [
     name: 'Pingyao',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Pingyao#/media/File:PingYaoCityWall.jpg',
+      'http://www.worldadventurewithfamily.com/wp-content/uploads/2018/08/Pingyao-streets.jpg',
     localizations: [
       {
         lang: 'en',
@@ -520,7 +517,7 @@ const placesJapan = [
     name: 'Himeji Castle',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Himeji_Castle#/media/File:Himeji_castle_in_may_2015.jpg',
+      'https://www.touristinjapan.com/wp-content/uploads/2018/03/IMG_1174.jpg',
     localizations: [
       {
         lang: 'en',
@@ -541,7 +538,7 @@ const placesJapan = [
     name: 'Shirakami-Sanchi',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Shirakami-Sanchi#/media/File:Sirakami_santi.JPG',
+      'https://lh3.googleusercontent.com/4EZxHy6u8Kwzc2cbcJjFMosTWDKIx90D89py0xJ9s4sHXVHMAN1pLyiDBzEVxmTBli7PFqbY4f-LWZBg2IY3q90=s1200-c',
     localizations: [
       {
         lang: 'en',
@@ -562,7 +559,7 @@ const placesJapan = [
     name: 'Hiroshima Peace Memorial',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Hiroshima_Peace_Memorial#/media/File:Genbaku_Dome04-r.JPG',
+      'https://static.wixstatic.com/media/c22288_3327323d88ed426d85174f36dbd738c3~mv2_d_1200_1200_s_2.jpg/v1/fill/w_1000,h_1000,al_c,q_90,usm_0.66_1.00_0.01/c22288_3327323d88ed426d85174f36dbd738c3~mv2_d_1200_1200_s_2.jpg',
     localizations: [
       {
         lang: 'en',
@@ -583,7 +580,7 @@ const placesJapan = [
     name: 'Iwami Ginzan Silver Mine',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Iwami_Ginzan_Silver_Mine#/media/File:180504_Kamaya-mabu_of_Iwami_Ginzan_Silver_Mine_Oda_Shimane_pref_Japan01o.JPG',
+      'https://i0.wp.com/www.kagolabo.jp/wp-content/uploads/2019/04/3831986950037492811_IMG_0686.jpg?fit=2000%2C2000&ssl=1',
     localizations: [
       {
         lang: 'en',
@@ -604,7 +601,7 @@ const placesJapan = [
     name: 'Mount Fuji',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Mount_Fuji#/media/File:MtFuji_FujiCity.jpg',
+      'https://www.liveabout.com/thmb/P4F1v4IhhE_htdNhwNTPw0iMos4=/2576x2576/smart/filters:no_upscale()/fuji-mountain-in-autumn-822273028-5a6a8a9c3418c600363958d3.jpg',
     localizations: [
       {
         lang: 'en',
@@ -625,7 +622,7 @@ const placesJapan = [
     name: 'Okinoshima',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Okinoshima_(Fukuoka)#/media/File:Okinoshima_aerial01.jpg',
+      'https://i.guim.co.uk/img/media/7f8a06d5af34c1974777d037f29276acdd7e9cf3/0_149_4190_2516/master/4190.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=966a9eb9e85068e7303edfb5c819f41b',
     localizations: [
       {
         lang: 'en',
@@ -649,7 +646,7 @@ const placesUsa = [
     name: 'Yellowstone National Park',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Yellowstone_National_Park#/media/File:YellowstonefallJUN05.JPG',
+      'https://www.history.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTU3ODc4NjAzNzkyODUyNzAz/gettyimages-154931596-2.jpg',
     localizations: [
       {
         lang: 'en',
@@ -670,7 +667,7 @@ const placesUsa = [
     name: 'Grand Canyon National Park',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Grand_Canyon_National_Park#/media/File:Dawn_on_the_S_rim_of_the_Grand_Canyon_(8645178272).jpg',
+      'https://images.theconversation.com/files/257352/original/file-20190206-86233-aw2pbd.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop',
     localizations: [
       {
         lang: 'en',
@@ -691,7 +688,7 @@ const placesUsa = [
     name: 'Statue of Liberty',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Statue_of_Liberty#/media/File:Lady_Liberty_under_a_blue_sky_(cropped).jpg',
+      'https://www.history.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTY1MTc1MTk3ODI0MDAxNjA5/topic-statue-of-liberty-gettyimages-960610006-promo.jpg',
     localizations: [
       {
         lang: 'en',
@@ -712,7 +709,7 @@ const placesUsa = [
     name: 'Carlsbad Caverns National Park',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park#/media/File:Carlsbad_Interior_Formations.jpg',
+      'https://i.pinimg.com/originals/74/bd/99/74bd99514f787da337fa4a84767eda55.jpg',
     localizations: [
       {
         lang: 'en',
@@ -733,7 +730,7 @@ const placesUsa = [
     name: 'Monticello',
     rating: 0,
     photoUrl:
-      "https://en.wikipedia.org/wiki/Monticello#/media/File:Thomas_Jefferson's_Monticello_(cropped).JPG",
+      'https://www.history.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTY1MTc0NjEyNjM0NjQxOTkz/topic-monticello-gettyimages-687535262.jpg',
     localizations: [
       {
         lang: 'en',
@@ -754,7 +751,7 @@ const placesUsa = [
     name: 'Taos Pueblo',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Taos_Pueblo#/media/File:Taos_Pueblo_2017-05-05.jpg',
+      'https://i.pinimg.com/originals/4e/cb/76/4ecb765497fc2bd59be8de94945a15f2.jpg',
     localizations: [
       {
         lang: 'en',
@@ -778,7 +775,7 @@ const placesEgypt = [
     name: 'Theban Necropolis',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Theban_Necropolis#/media/File:SFEC_AEH_-ThebesNecropolis-2010-FULL-Overview-039.jpg',
+      'https://i.pinimg.com/originals/fa/89/12/fa89126ac70414e7d1279e7842459067.jpg',
     localizations: [
       {
         lang: 'en',
@@ -799,7 +796,7 @@ const placesEgypt = [
     name: 'Islamic Cairo',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Islamic_Cairo#/media/File:Islamic-cairo-street.jpg',
+      'https://images.squarespace-cdn.com/content/5586b76fe4b0b53c316c598d/1461264862853-YYVHUFL4WXMUDQIPCU9Q/IMG_8294.JPG?format=1500w&content-type=image%2Fjpeg',
     localizations: [
       {
         lang: 'en',
@@ -820,7 +817,7 @@ const placesEgypt = [
     name: "Saint Catherine's Monastery",
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Saint_Catherine%27s_Monastery#/media/File:Saint_Catherine_Sinai.jpg',
+      'https://sinaisharm.com/ss15/wp-content/uploads/st_uploadfont/Saint-Catherine-Sinai-1024x1024.jpg',
     localizations: [
       {
         lang: 'en',
@@ -841,7 +838,7 @@ const placesEgypt = [
     name: 'Wadi Al-Hitan',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Wadi_El_Hitan#/media/File:The_whales_fossils.jpg',
+      'https://img.haarets.co.il/img/1.6826046/4159601294.jpg?precrop=1474,2200,x0,y0&height=1200&width=1200',
     localizations: [
       {
         lang: 'en',
@@ -862,7 +859,7 @@ const placesEgypt = [
     name: 'Abu Mena',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Abu_Mena#/media/File:Religious_Complex_at_Abu_Mena_(XIII).jpg',
+      'https://en.unesco.org/mediabank/15236/1.haspreviewThumbnailVersion/30201337.jpg',
     localizations: [
       {
         lang: 'en',
@@ -883,7 +880,7 @@ const placesEgypt = [
     name: 'The Giza Pyramid Complex',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Giza_pyramid_complex#/media/File:Pyramids_of_the_Giza_Necropolis.jpg',
+      'https://d.newsweek.com/en/full/698445/giza-pyramid.jpg?w=1600&h=1600&q=88&f=58fe6e1a1250b6851285969d6e27c7d0',
     localizations: [
       {
         lang: 'en',
@@ -907,7 +904,7 @@ const placesUk = [
     name: "Giant's Causeway",
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Giant%27s_Causeway#/media/File:Causeway-code_poet-4.jpg',
+      'https://www.tripsavvy.com/thmb/POjj8hLh7bDZuZQyF6NVsCM5ztU=/1414x1414/smart/filters:no_upscale()/GiantsCauseway-5b0da585a474be00376375fc.jpg',
     localizations: [
       {
         lang: 'en',
@@ -928,7 +925,7 @@ const placesUk = [
     name: 'Ironbridge Gorge',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Ironbridge_Gorge#/media/File:Iron_Bridge_east_side_in_February_2019.jpg',
+      'https://www.erih.net/fileadmin/_processed_/6/6/csm_Iron_Bridge_4_242df66199.jpg',
     localizations: [
       {
         lang: 'en',
@@ -948,8 +945,7 @@ const placesUk = [
     id: '929edcab-c426-4a44-a3db-2a51103da0c3',
     name: 'Stonehenge',
     rating: 0,
-    photoUrl:
-      'https://en.wikipedia.org/wiki/Stonehenge#/media/File:Stonehenge2007_07_30.jpg',
+    photoUrl: 'https://scx2.b-cdn.net/gfx/news/hires/2020/5f21d4b0f00f1.jpg',
     localizations: [
       {
         lang: 'en',
@@ -970,7 +966,7 @@ const placesUk = [
     name: 'Tower of London',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Tower_of_London#/media/File:Tower_of_London_from_the_Shard_(8515883950).jpg',
+      'https://img.static-kl.com/images/media/7CE4174E-6D48-47A8-9CC350EFFE96400E?aspect_ratio=1:1&min_width=912',
     localizations: [
       {
         lang: 'en',
@@ -991,7 +987,7 @@ const placesUk = [
     name: 'Greenwich',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Greenwich#/media/File:312SFEC_LONDON-20070917.JPG',
+      'https://i.guim.co.uk/img/media/660dfc865d13dd785ae526c12cf429df40fbdda1/41_726_2305_1382/master/2305.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=5bab11786a1b1fb7ef8d59ba4dd72748',
     localizations: [
       {
         lang: 'en',
@@ -1012,7 +1008,7 @@ const placesUk = [
     name: 'Liverpool',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Liverpool#/media/File:LpoolTownHallOM.jpg',
+      'https://i2-prod.liverpoolecho.co.uk/incoming/article19942268.ece/ALTERNATES/s1200c/1_JS229622463.jpg',
     localizations: [
       {
         lang: 'en',
@@ -1036,7 +1032,7 @@ const placesTurkey = [
     name: 'Istanbul',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Istanbul#/media/File:Istanbul_Fatih_Sultan_Mehmet_Bridge_IMG_7247_1725.jpg',
+      'https://i.guim.co.uk/img/media/bcc2e5bb0c5fb1806ffe213d78a6de04a929cafd/0_245_5157_3094/master/5157.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=77d88f324ddb0021974baa05994e652e',
     localizations: [
       {
         lang: 'en',
@@ -1057,7 +1053,7 @@ const placesTurkey = [
     name: 'Göreme National Park',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/G%C3%B6reme_National_Park#/media/File:G%C3%B6reme_Valley_in_Cappadocia_edit1.jpg',
+      'https://mediaim.expedia.com/destination/1/32e0c90dc3291baa794437464713dd81.jpg',
     localizations: [
       {
         lang: 'en',
@@ -1078,7 +1074,7 @@ const placesTurkey = [
     name: 'Hierapolis',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Hierapolis#/media/File:Hierapolis_01.jpg',
+      'https://i.pinimg.com/originals/9a/87/42/9a87422202f496e50d4f423b3ca3eecd.png',
     localizations: [
       {
         lang: 'en',
@@ -1099,7 +1095,7 @@ const placesTurkey = [
     name: 'Ephesus',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Ephesus#/media/File:Ephesus_Celsus_Library_Fa%C3%A7ade.jpg',
+      'https://www.history.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTU3ODc5MDg3MjQxMzczMDAx/ephesus-ruins.jpg',
     localizations: [
       {
         lang: 'en',
@@ -1119,8 +1115,7 @@ const placesTurkey = [
     id: 'd0558de2-03d8-4125-a24c-ecd86ff972a4',
     name: 'Aphrodisias',
     rating: 0,
-    photoUrl:
-      'https://en.wikipedia.org/wiki/Aphrodisias#/media/File:The_Temple_of_Aphrodite,_built_in_the_Ionic_order_in_stages_during_the_Roman_period_(from_1st_century_BC_to_2nd_century_AD)_and_later_converted_into_a_Christian_basilica,_Aphrodisias,_Caria,_Turkey_(19864929084).jpg',
+    photoUrl: 'https://pbs.twimg.com/media/EBOQmCuUEAApdhe.jpg:large',
     localizations: [
       {
         lang: 'en',
@@ -1141,7 +1136,7 @@ const placesTurkey = [
     name: 'Troy',
     rating: 0,
     photoUrl:
-      'https://en.wikipedia.org/wiki/Troy#/media/File:Walls_of_Troy_(2).jpg',
+      'https://i.guim.co.uk/img/media/70f2aed972a26d2e282c98a74938ff7edaef87a3/358_126_5904_3544/master/5904.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=82966fccd9fc17c8dcff2fff835b63ba',
     localizations: [
       {
         lang: 'en',
