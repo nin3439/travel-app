@@ -39,7 +39,7 @@ const Countries: any = [
         name: 'Италия',
       },
     ],
-    placesItaly,
+    countryPlaces: placesItaly,
   },
   {
     id: 'fcc32f88-bde8-41cc-89e7-4174cd7e8ea9',
@@ -69,7 +69,7 @@ const Countries: any = [
         name: 'Франция',
       },
     ],
-    placesFrance,
+    countryPlaces: placesFrance,
   },
   {
     id: '6d4c7a0d-8bd0-4f43-989e-55c253e52ef8',
@@ -99,7 +99,7 @@ const Countries: any = [
         name: 'Россия',
       },
     ],
-    placesRussia,
+    countryPlaces: placesRussia,
   },
   {
     id: '9f14a0d1-1649-481b-9a10-f34c8c14ec65',
@@ -129,7 +129,7 @@ const Countries: any = [
         name: 'Китай',
       },
     ],
-    placesChina,
+    countryPlaces: placesChina,
   },
   {
     id: 'c591d9ef-0b4e-41df-b8cd-4098784f107a',
@@ -159,7 +159,7 @@ const Countries: any = [
         name: 'Япония',
       },
     ],
-    placesJapan,
+    countryPlaces: placesJapan,
   },
   {
     id: 'bccdb952-9440-4021-ad57-b8bd499f4e64',
@@ -189,7 +189,7 @@ const Countries: any = [
         name: 'Соединенные Штаты Америки',
       },
     ],
-    placesUsa,
+    countryPlaces: placesUsa,
   },
   {
     id: '2cc12f75-d781-4d4f-ab13-c21ee5dd5a8e',
@@ -219,7 +219,7 @@ const Countries: any = [
         name: 'Египет',
       },
     ],
-    placesEgypt,
+    countryPlaces: placesEgypt,
   },
   {
     id: '21f7b9ce-7812-46e4-ac76-ed5c40a487c8',
@@ -249,7 +249,7 @@ const Countries: any = [
         name: 'Великобритания',
       },
     ],
-    placesUk,
+    countryPlaces: placesUk,
   },
   {
     id: '365f1998-55ff-44b2-b19b-74ff2ae5bf22',
@@ -259,7 +259,7 @@ const Countries: any = [
       type: 'Point',
     },
     imageUrl:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Turkey-3019_-_Hagia_Sophia_%282216460729%29.jpg/1920px-Turkey-3019_-_Hagia_Sophia_%282216460729%29.jpg',
+      'https://www.jpmorgan.com/content/dam/jpm/merchant-services/country-reports/turkey/JP_Morgan_Turkey-Headers-1.jpg',
 
     videoUrl: 'https://www.youtube.com/watch?v=r8rZQKXijb8',
     currency: 'TRY',
@@ -280,7 +280,7 @@ const Countries: any = [
         name: 'Турция',
       },
     ],
-    placesTurkey,
+    countryPlaces: placesTurkey,
   },
 ];
 
