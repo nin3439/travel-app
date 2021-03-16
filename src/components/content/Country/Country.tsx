@@ -6,7 +6,11 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import ReactPlayer from 'react-player/lazy';
 
-export const Country: React.FC = () => {
+interface ICountryProps {
+  selectLanguage: string;
+}
+
+export const Country: React.FC<ICountryProps> = ({ selectLanguage }) => {
   const { params } = useRouteMatch();
   const country = mockCountries.find(
     // @ts-ignore
@@ -24,18 +28,20 @@ export const Country: React.FC = () => {
       justify="space-between"
       alignItems="center"
     >
-      <Typography variant="h3">{country.name}</Typography>
+      <Typography variant="h3">
+        {country.localizations[selectLanguage].name}
+      </Typography>
       <img
         style={{ border: 'solid #3f51b5 6px' }}
         width="35%"
         src={country.imageUrl}
-        alt={country.name}
+        alt={country.localizations[selectLanguage].name}
       />
       <Typography variant="subtitle1">
-        Capital: {country.localizations[0].capital}
+        Capital: {country.localizations[selectLanguage].capital}
       </Typography>
       <Typography variant="body1">
-        {country.localizations[0].description}
+        {country.localizations[selectLanguage].description}
       </Typography>
       <Carousel width="60vw">
         {country.countryPlaces.map(({ photoUrl, name, localizations }: any) => {
@@ -43,8 +49,8 @@ export const Country: React.FC = () => {
             <Grid>
               <img src={`${photoUrl}`} alt={`${name}`} width="100vw" />
               <Typography variant="body2" className="legend">
-                <Typography variant="body1">{`${name}`}</Typography>
-                {`${localizations[0].description}`}
+                <Typography variant="body1">{`${localizations[selectLanguage].name}`}</Typography>
+                {`${localizations[selectLanguage].description}`}
               </Typography>
             </Grid>
           );

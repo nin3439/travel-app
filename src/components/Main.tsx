@@ -5,9 +5,19 @@ import { Header } from './Header';
 import { Countries } from '../components/content/Countries';
 import { Country } from '../components/content/Country/Country';
 import { Footer } from './Footer';
-import { countriesMainPage } from '../utils/utils';
+import mockCountries from '../models/MockCountries';
 
 export const Main: React.FC = () => {
+  const [selectLanguage, setselectLanguage] = React.useState('0');
+
+  const countriesMainPage = mockCountries.map((country: any) => {
+    return {
+      name: country.localizations[selectLanguage].name,
+      capital: country.localizations[selectLanguage].capital,
+      imageUrl: country.imageUrl,
+    };
+  });
+
   const [countries, setCountries] = useState(countriesMainPage);
   const [searchValue, setSearchValue] = useState('');
 
@@ -29,7 +39,12 @@ export const Main: React.FC = () => {
         justify="space-between"
         alignItems="center"
       >
-        <Header searchValue={searchValue} setSearchValue={setSearchValue} />
+        <Header
+          searchValue={searchValue}
+          setSearchValue={setSearchValue}
+          selectLanguage={selectLanguage}
+          setselectLanguage={setselectLanguage}
+        />
         <Grid
           style={{ minHeight: 'calc(100vh - 128px)', padding: '10px 20px' }}
         >
@@ -38,7 +53,7 @@ export const Main: React.FC = () => {
               <Countries countries={countries} />
             </Route>
             <Route path="/:string">
-              <Country />
+              <Country selectLanguage={selectLanguage} />
             </Route>
           </Switch>
         </Grid>

@@ -60,17 +60,19 @@ const StyledButton = styled(Button)`
 interface IHeaderProps {
   searchValue: string;
   setSearchValue: (searchValue: string) => void;
+  selectLanguage: string;
+  setselectLanguage: (selectLanguage: string) => void;
 }
 
 export const Header: React.FC<IHeaderProps> = ({
   searchValue,
   setSearchValue,
+  selectLanguage,
+  setselectLanguage,
 }) => {
-  // const [selectLangValue, setSelectLangValue] = React.useState('');
-
-  // const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
-  //   setSelectLangValue(event.target.value as string);
-  // };
+  const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
+    setselectLanguage(event.target.value as string);
+  };
   return (
     <AppBar position="static">
       <Toolbar>
@@ -117,14 +119,16 @@ export const Header: React.FC<IHeaderProps> = ({
           </Grid>
           <FormControl style={{ margin: '0 10px', color: '#fff' }}>
             <Select
-              // value={selectLangValue}
-              // onChange={handleChange}
-              displayEmpty
+              value={selectLanguage}
+              onChange={handleChange}
+              // displayEmpty
               style={{ color: '#fff' }}
             >
-              <MenuItem>English</MenuItem>
-              <MenuItem>Русский</MenuItem>
-              <MenuItem>Белорусский</MenuItem>
+              <MenuItem value={0} selected>
+                English
+              </MenuItem>
+              <MenuItem value={1}>Русский</MenuItem>
+              <MenuItem value={2}>Беларуская</MenuItem>
             </Select>
           </FormControl>
           <IconButton edge="end" color="inherit" aria-label="open drawer">
