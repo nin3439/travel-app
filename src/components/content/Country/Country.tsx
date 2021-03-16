@@ -2,6 +2,7 @@ import React from 'react';
 import { Typography, Grid } from '@material-ui/core';
 import { useRouteMatch } from 'react-router-dom';
 import mockCountries from '../../../models/MockCountries';
+import appInterfaces from '../../../models/AppInterfaces';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import ReactPlayer from 'react-player/lazy';
@@ -38,7 +39,8 @@ export const Country: React.FC<ICountryProps> = ({ selectLanguage }) => {
         alt={country.localizations[selectLanguage].name}
       />
       <Typography variant="subtitle1">
-        Capital: {country.localizations[selectLanguage].capital}
+        {appInterfaces[selectLanguage].capital}:
+        {country.localizations[selectLanguage].capital}
       </Typography>
       <Typography variant="body1">
         {country.localizations[selectLanguage].description}

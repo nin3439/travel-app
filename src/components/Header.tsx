@@ -14,6 +14,7 @@ import {
   Button,
 } from '@material-ui/core';
 import styled from 'styled-components';
+import appInterfaces from '../models/AppInterfaces';
 
 const StyledTextField = styled(TextField)`
   padding: 0 0 0 10px;
@@ -98,7 +99,7 @@ export const Header: React.FC<IHeaderProps> = ({
             </StyledLink>
             <StyledGrid>
               <StyledTextField
-                placeholder="Search…"
+                placeholder={appInterfaces[selectLanguage].placeholder}
                 inputProps={{ 'aria-label': 'search' }}
                 autoFocus={true}
                 value={searchValue}
