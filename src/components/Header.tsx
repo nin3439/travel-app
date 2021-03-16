@@ -14,6 +14,7 @@ import {
   Button,
 } from '@material-ui/core';
 import styled from 'styled-components';
+import appInterfaces from '../models/AppInterfaces';
 
 const StyledTextField = styled(TextField)`
   padding: 0 0 0 10px;
@@ -60,17 +61,19 @@ const StyledButton = styled(Button)`
 interface IHeaderProps {
   searchValue: string;
   setSearchValue: (searchValue: string) => void;
+  selectLanguage: string;
+  setselectLanguage: (selectLanguage: string) => void;
 }
 
 export const Header: React.FC<IHeaderProps> = ({
   searchValue,
   setSearchValue,
+  selectLanguage,
+  setselectLanguage,
 }) => {
-  // const [selectLangValue, setSelectLangValue] = React.useState('');
-
-  // const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
-  //   setSelectLangValue(event.target.value as string);
-  // };
+  const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
+    setselectLanguage(event.target.value as string);
+  };
   return (
     <AppBar position="static">
       <Toolbar>
@@ -96,7 +99,7 @@ export const Header: React.FC<IHeaderProps> = ({
             </StyledLink>
             <StyledGrid>
               <StyledTextField
-                placeholder="Search…"
+                placeholder={appInterfaces[selectLanguage].placeholder}
                 inputProps={{ 'aria-label': 'search' }}
                 autoFocus={true}
                 value={searchValue}
@@ -117,14 +120,16 @@ export const Header: React.FC<IHeaderProps> = ({
           </Grid>
           <FormControl style={{ margin: '0 10px', color: '#fff' }}>
             <Select
-              // value={selectLangValue}
-              // onChange={handleChange}
-              displayEmpty
+              value={selectLanguage}
+              onChange={handleChange}
+              // displayEmpty
               style={{ color: '#fff' }}
             >
-              <MenuItem>English</MenuItem>
-              <MenuItem>Русский</MenuItem>
-              <MenuItem>Белорусский</MenuItem>
+              <MenuItem value={0} selected>
+                English
+              </MenuItem>
+              <MenuItem value={1}>Русский</MenuItem>
+              <MenuItem value={2}>Беларуская</MenuItem>
             </Select>
           </FormControl>
           <IconButton edge="end" color="inherit" aria-label="open drawer">
