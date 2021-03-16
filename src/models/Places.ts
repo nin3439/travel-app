@@ -1,25 +1,25 @@
 const placesItaly = [
   {
-    id: 'e9311f52-d389-46be-8305-22df2285dfc9',
-    name: 'Colosseum',
-    photoUrl:
-      'https://i.pinimg.com/originals/2f/41/0f/2f410fe1933058df5a2879c5d3d24a95.jpg',
+    id: '7d9bd58f-d833-4f37-bf6b-d57ff87930ee',
+    name: 'Pompeii',
+    photoUrl: 'https://images.wsj.net/im-222242?width=1280&size=1',
     localizations: [
       {
         lang: 'en',
         description:
-          'The Colosseum (/ˌkɒləˈsiːəm/ KOL-ə-SEE-əm; Italian: Colosseo [kolosˈsɛːo]), is an oval amphitheatre in the centre of the city of Rome, Italy, just east of the Roman Forum and is the largest ancient amphitheatre ever built, and is still the largest standing amphitheater in the world today, despite its age. Construction began under the emperor Vespasian (r. 69–79 AD) in 72 and was completed in AD 80 under his successor and heir, Titus (r. 79–81). Further modifications were made during the reign of Domitian (r. 81–96). The three emperors that were patrons of the work are known as the Flavian dynasty, and the amphitheatre was named the Flavian Amphitheatre (Latin: Amphitheatrum Flavium; Italian: Anfiteatro Flavio [aɱfiteˈaːtro ˈflaːvjo]) by later classicists and archaeologists for its association with their family name (Flavius).',
-        name: 'The Colosseum',
+          'Pompeii (/pɒmˈpeɪ(i)/, Latin: [pɔmˈpei̯iː]) was an ancient city located in what is now the comune of Pompei near Naples in the Campania region of Italy. Pompeii, along with Herculaneum and many villas in the surrounding area (e.g. at Boscoreale, Stabiae), was buried under 4 to 6 m (13 to 20 ft) of volcanic ash and pumice in the eruption of Mount Vesuvius in AD 79.Largely preserved under the ash, the excavated city offered a unique snapshot of Roman life, frozen at the moment it was buried, and an extraordinarily detailed insight into the everyday life of its inhabitants, although much of the evidence was lost in the early excavations.',
+        name: 'Pompeii',
       },
       {
         lang: 'ru',
         description:
-          'Колизе́й (лат. Сolosseum), или амфитеатр Флавиев (лат. Amphitheatrum Flavium) — амфитеатр, памятник архитектуры Древнего Рима, наиболее известное и одно из самых грандиозных сооружений Древнего мира, сохранившихся до нашего времени. Находится в Риме, в низине между Эсквилинским, Палатинским и Целиевым холмами.  Строительство самого большого амфитеатра античного мира, вместимостью свыше 50 тыс. человек, велось на протяжении восьми лет как коллективное сооружение императоров династии Флавиев. Его начали строить в 72 году н. э. при императоре Веспасиане, а в 80 году н. э. амфитеатр был освящён императором Титом. Амфитеатр расположился на том месте, где был пруд, относившийся к Золотому дому Нерона.',
-        name: 'Колизей',
+          'Помпеи (лат. Pompeii, итал. Pompei, неап. Pompei; греч. Πομπηία) - древний город, расположенный на территории нынешней коммуны Помпеи недалеко от Неаполя в регионе Кампания в Италии. Помпеи, наряду с Геркуланумом и многими виллами в окрестностях (например, в Боскореале, Стабии), были погребены под слоем вулканического пепла и пемзы на глубине от 4 до 6 м (от 13 до 20 футов) во время извержения Везувия в 79 году нашей эры. Под пеплом раскопанный город представлял собой уникальный снимок римской жизни, застывшей в момент захоронения, и чрезвычайно подробное представление о повседневной жизни его жителей, хотя большая часть свидетельств была утеряна в ходе ранних раскопок.',
+        name: 'Помпеи',
       },
     ],
     rating: 0,
   },
+
   {
     id: '1569a764-cc38-49ef-91e6-e0d7c8e6638a',
     name: 'Cinque Terre',
@@ -41,26 +41,7 @@ const placesItaly = [
     ],
     rating: 0,
   },
-  {
-    id: '7d9bd58f-d833-4f37-bf6b-d57ff87930ee',
-    name: 'Pompeii',
-    photoUrl: 'https://images.wsj.net/im-222242?width=1280&size=1',
-    localizations: [
-      {
-        lang: 'en',
-        description:
-          'Pompeii (/pɒmˈpeɪ(i)/, Latin: [pɔmˈpei̯iː]) was an ancient city located in what is now the comune of Pompei near Naples in the Campania region of Italy. Pompeii, along with Herculaneum and many villas in the surrounding area (e.g. at Boscoreale, Stabiae), was buried under 4 to 6 m (13 to 20 ft) of volcanic ash and pumice in the eruption of Mount Vesuvius in AD 79.Largely preserved under the ash, the excavated city offered a unique snapshot of Roman life, frozen at the moment it was buried, and an extraordinarily detailed insight into the everyday life of its inhabitants, although much of the evidence was lost in the early excavations.',
-        name: 'Pompeii',
-      },
-      {
-        lang: 'ru',
-        description:
-          'Помпеи (лат. Pompeii, итал. Pompei, неап. Pompei; греч. Πομπηία) - древний город, расположенный на территории нынешней коммуны Помпеи недалеко от Неаполя в регионе Кампания в Италии. Помпеи, наряду с Геркуланумом и многими виллами в окрестностях (например, в Боскореале, Стабии), были погребены под слоем вулканического пепла и пемзы на глубине от 4 до 6 м (от 13 до 20 футов) во время извержения Везувия в 79 году нашей эры. Под пеплом раскопанный город представлял собой уникальный снимок римской жизни, застывшей в момент захоронения, и чрезвычайно подробное представление о повседневной жизни его жителей, хотя большая часть свидетельств была утеряна в ходе ранних раскопок.',
-        name: 'Помпеи',
-      },
-    ],
-    rating: 0,
-  },
+
   {
     id: '4e8b8b22-85ce-434f-b273-40f14f02d480',
     name: 'Tower of Pisa',
@@ -120,6 +101,27 @@ const placesItaly = [
         description:
           'Площадь Святого Петра (итал.: Piazza San Pietro [ˈpjattsa sam ˈpjɛːtro], латин: Forum Sancti Petri) - большая площадь, расположенная прямо перед базиликой Святого Петра в Ватикане, папском анклаве в Риме, прямо к западу от окрестности (рионе) Борго. И площадь, и базилика названы в честь Святого Петра, апостола Иисуса, которого католики считают первым Папой.',
         name: 'Площадь Святого Петра',
+      },
+    ],
+    rating: 0,
+  },
+  {
+    id: 'e9311f52-d389-46be-8305-22df2285dfc9',
+    name: 'Colosseum',
+    photoUrl:
+      'https://i.pinimg.com/originals/2f/41/0f/2f410fe1933058df5a2879c5d3d24a95.jpg',
+    localizations: [
+      {
+        lang: 'en',
+        description:
+          'The Colosseum (/ˌkɒləˈsiːəm/ KOL-ə-SEE-əm; Italian: Colosseo [kolosˈsɛːo]), is an oval amphitheatre in the centre of the city of Rome, Italy, just east of the Roman Forum and is the largest ancient amphitheatre ever built, and is still the largest standing amphitheater in the world today, despite its age. Construction began under the emperor Vespasian (r. 69–79 AD) in 72 and was completed in AD 80 under his successor and heir, Titus (r. 79–81). Further modifications were made during the reign of Domitian (r. 81–96). The three emperors that were patrons of the work are known as the Flavian dynasty, and the amphitheatre was named the Flavian Amphitheatre (Latin: Amphitheatrum Flavium; Italian: Anfiteatro Flavio [aɱfiteˈaːtro ˈflaːvjo]) by later classicists and archaeologists for its association with their family name (Flavius).',
+        name: 'The Colosseum',
+      },
+      {
+        lang: 'ru',
+        description:
+          'Колизе́й (лат. Сolosseum), или амфитеатр Флавиев (лат. Amphitheatrum Flavium) — амфитеатр, памятник архитектуры Древнего Рима, наиболее известное и одно из самых грандиозных сооружений Древнего мира, сохранившихся до нашего времени. Находится в Риме, в низине между Эсквилинским, Палатинским и Целиевым холмами.  Строительство самого большого амфитеатра античного мира, вместимостью свыше 50 тыс. человек, велось на протяжении восьми лет как коллективное сооружение императоров династии Флавиев. Его начали строить в 72 году н. э. при императоре Веспасиане, а в 80 году н. э. амфитеатр был освящён императором Титом. Амфитеатр расположился на том месте, где был пруд, относившийся к Золотому дому Нерона.',
+        name: 'Колизей',
       },
     ],
     rating: 0,

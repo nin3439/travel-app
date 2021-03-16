@@ -18,8 +18,6 @@ export const Main: React.FC = () => {
         country.capital.toLowerCase().includes(searchValue.toLowerCase())
       );
     });
-    console.log(foundCountries);
-    console.log(searchValue);
     setCountries(foundCountries);
   }, [searchValue]);
 

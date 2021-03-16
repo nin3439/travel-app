@@ -2,7 +2,6 @@ import React from 'react';
 import { Main } from './components/Main';
 import { ThemeProvider } from 'styled-components';
 import { createMuiTheme, StylesProvider } from '@material-ui/core/styles';
-import './App.css';
 
 const customTheme = createMuiTheme();
 

@@ -14,42 +14,43 @@ export const Country: React.FC = () => {
   );
 
   if (!country) {
-    return <span>Не найдено</span>;
+    return <span>Not Found</span>;
   }
+
   return (
-    <Typography style={{ margin: '10px' }}>
-      <Grid
-        container
-        direction="column"
-        justify="space-between"
-        alignItems="center"
-      >
-        <h2>{country.name}</h2>
-        <img
-          style={{ border: 'solid #3f51b5 6px' }}
-          width="35%"
-          src={country.imageUrl}
-          alt={country.name}
-        />
-        <div>Capital: {country.localizations[0].capital}</div>
-        <div>{country.localizations[0].description}</div>
-        <Carousel width="60vw">
-          {country.countryPlaces.map(
-            ({ photoUrl, name, localizations }: any) => {
-              return (
-                <div>
-                  <img src={`${photoUrl}`} alt={`${name}`} width="100vw" />
-                  <p className="legend">
-                    <h3>{`${name}`}</h3>
-                    {`${localizations[0].description}`}
-                  </p>
-                </div>
-              );
-            }
-          )}
-        </Carousel>
-        <ReactPlayer url={country.videoUrl} controls={true} loop={true} />
-      </Grid>
-    </Typography>
+    <Grid
+      container
+      direction="column"
+      justify="space-between"
+      alignItems="center"
+    >
+      <Typography variant="h3">{country.name}</Typography>
+      <img
+        style={{ border: 'solid #3f51b5 6px' }}
+        width="35%"
+        src={country.imageUrl}
+        alt={country.name}
+      />
+      <Typography variant="subtitle1">
+        Capital: {country.localizations[0].capital}
+      </Typography>
+      <Typography variant="body1">
+        {country.localizations[0].description}
+      </Typography>
+      <Carousel width="60vw">
+        {country.countryPlaces.map(({ photoUrl, name, localizations }: any) => {
+          return (
+            <Grid>
+              <img src={`${photoUrl}`} alt={`${name}`} width="100vw" />
+              <Typography variant="body2" className="legend">
+                <Typography variant="body1">{`${name}`}</Typography>
+                {`${localizations[0].description}`}
+              </Typography>
+            </Grid>
+          );
+        })}
+      </Carousel>
+      <ReactPlayer url={country.videoUrl} controls={true} loop={true} />
+    </Grid>
   );
 };
