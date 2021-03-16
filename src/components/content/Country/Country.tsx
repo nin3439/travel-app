@@ -44,17 +44,19 @@ export const Country: React.FC<ICountryProps> = ({ selectLanguage }) => {
         {country.localizations[selectLanguage].description}
       </Typography>
       <Carousel width="60vw">
-        {country.countryPlaces.map(({ photoUrl, name, localizations }: any) => {
-          return (
-            <Grid>
-              <img src={`${photoUrl}`} alt={`${name}`} width="100vw" />
-              <Typography variant="body2" className="legend">
-                <Typography variant="body1">{`${localizations[selectLanguage].name}`}</Typography>
-                {`${localizations[selectLanguage].description}`}
-              </Typography>
-            </Grid>
-          );
-        })}
+        {country.countryPlaces.map(
+          ({ photoUrl, name, localizations }: any, index: number) => {
+            return (
+              <Grid key={index}>
+                <img src={`${photoUrl}`} alt={`${name}`} width="100vw" />
+                <Typography variant="body2" className="legend">
+                  <Typography variant="body1">{`${localizations[selectLanguage].name}`}</Typography>
+                  {`${localizations[selectLanguage].description}`}
+                </Typography>
+              </Grid>
+            );
+          }
+        )}
       </Carousel>
       <ReactPlayer url={country.videoUrl} controls={true} loop={true} />
     </Grid>

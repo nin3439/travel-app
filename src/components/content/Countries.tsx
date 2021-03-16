@@ -38,7 +38,7 @@ export const Countries: React.FC<ICountriesProps> = ({ countries }) => {
       ) : (
         countries.map((country: any, index: number) => {
           return (
-            <StyledLink to={`/${country.name}`} key={index}>
+            <StyledLink to={`/${country.country}`} key={index}>
               <StyledCard>
                 <CardContent>
                   <StyledImage src={country.imageUrl} alt={country.name} />

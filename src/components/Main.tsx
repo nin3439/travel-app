@@ -12,6 +12,7 @@ export const Main: React.FC = () => {
 
   const countriesMainPage = mockCountries.map((country: any) => {
     return {
+      country: country.name,
       name: country.localizations[selectLanguage].name,
       capital: country.localizations[selectLanguage].capital,
       imageUrl: country.imageUrl,
@@ -29,7 +30,8 @@ export const Main: React.FC = () => {
       );
     });
     setCountries(foundCountries);
-  }, [searchValue]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchValue, selectLanguage]);
 
   return (
     <Router>
