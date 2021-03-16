@@ -109,7 +109,7 @@ const Countries: any = [
       type: 'Point',
     },
     imageUrl:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Pudong_Shanghai_November_2017_panorama.jpg/2560px-Pudong_Shanghai_November_2017_panorama.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/The_Great_Wall_of_China_at_Jinshanling.jpg/1920px-The_Great_Wall_of_China_at_Jinshanling.jpg',
     videoUrl: 'https://www.youtube.com/watch?v=tBNkeXmq4IQ',
     currency: 'CNY',
     ISOCode: 'CN',
@@ -163,7 +163,7 @@ const Countries: any = [
   },
   {
     id: 'bccdb952-9440-4021-ad57-b8bd499f4e64',
-    name: 'United States of America',
+    name: 'USA',
     capitalLocation: {
       coordinates: [-77.0147, 38.9101],
       type: 'Point',
@@ -176,7 +176,7 @@ const Countries: any = [
     localizations: [
       {
         lang: 'en',
-        capital: 'Washington, D.C.',
+        capital: 'Washington',
         description:
           "The United States of America (USA) is a country primarily located in North America. It consists of 50 states, a federal district, five major self-governing territories, 326 Indian reservations, and some minor possessions. The United States is a highly developed country, and continuously ranks high in measures of socioeconomic performance. It accounts for approximately a quarter of global GDP and is the world's largest economy by GDP at market exchange rates. By value, the United States is the world's largest importer and the second-largest exporter of goods. Making up more than a third of global military spending, it is the foremost military power in the world and is a leading political, cultural, and scientific force internationally.",
         name: 'United States of America',
@@ -199,7 +199,7 @@ const Countries: any = [
       type: 'Point',
     },
     imageUrl:
-      'https://upload.wikimedia.org/wikipedia/commons/b/b2/View_from_Cairo_Tower_31march2007.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/All_Gizah_Pyramids.jpg/1920px-All_Gizah_Pyramids.jpg',
     videoUrl: 'https://www.youtube.com/watch?v=rsv4drcgHys',
     currency: 'EGP',
     ISOCode: 'EG',
@@ -223,13 +223,13 @@ const Countries: any = [
   },
   {
     id: '21f7b9ce-7812-46e4-ac76-ed5c40a487c8',
-    name: 'United Kingdom of Great Britain',
+    name: 'Great Britain',
     capitalLocation: {
       coordinates: [-0.116667, 51.5],
       type: 'Point',
     },
     imageUrl:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall_%28cropped%29.jpg/2880px-Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall_%28cropped%29.jpg',
+      'https://imageproxy.themaven.net//https%3A%2F%2Fwww.history.com%2F.image%2FMTU3ODc3NjU2NzQ4NTAwMjk3%2Fthis-day-in-history-05311859---big-ben-in-london.jpg',
     videoUrl: 'https://www.youtube.com/watch?v=wSHXd-K-jIk',
     currency: 'GBP',
     ISOCode: 'GB',

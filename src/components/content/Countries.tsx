@@ -1,28 +1,64 @@
 import React from 'react';
-import mockCountries from '../../models/MockCountries';
 import { Link } from 'react-router-dom';
 import { Grid, Card, CardContent, Typography } from '@material-ui/core';
+import styled from 'styled-components';
 
-export const Countries: React.FC = () => {
+const StyledImage = styled('img')`
+  width: 20vw;
+  height: 21vh;
+  border-radius: 4px;
+`;
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  transform: scale(1);
+  transition: transform 0.5s;
+  &:hover {
+    transition: transform 0.5s;
+    transform: scale(1.1);
+  }
+`;
+
+const StyledCard = styled(Card)`
+  margin: 15px;
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+`;
+
+interface ICountriesProps {
+  countries: any;
+}
+
+export const Countries: React.FC<ICountriesProps> = ({ countries }) => {
   return (
     <Grid container direction="row" justify="center" alignItems="center">
-      {mockCountries.map((country: any, index: number) => {
-        return (
-          <Link to={`/${country.name}`} key={index}>
-            <Card style={{ margin: '10px', width: '20vw', height: '25vh' }}>
-              <CardContent>
-                <img
-                  src={`${country.imageUrl}`}
-                  alt={`${country.name}`}
-                  width="200vw"
-                  height="100vh"
-                />
-                <Typography>{country.name.toUpperCase()}</Typography>
-              </CardContent>
-            </Card>
-          </Link>
-        );
-      })}
+      {!countries.length ? (
+        <Typography>Not Found</Typography>
+      ) : (
+        countries.map((country: any, index: number) => {
+          return (
+            <StyledLink to={`/${country.name}`} key={index}>
+              <StyledCard>
+                <CardContent>
+                  <StyledImage src={country.imageUrl} alt={country.name} />
+                  <Grid
+                    container
+                    direction="row"
+                    justify="space-between"
+                    alignItems="center"
+                    style={{ maxWidth: '20vw' }}
+                    wrap="nowrap"
+                  >
+                    <Typography variant="h5">{country.name}</Typography>
+                    <Typography>{country.capital}</Typography>
+                  </Grid>
+                </CardContent>
+              </StyledCard>
+            </StyledLink>
+          );
+        })
+      )}
     </Grid>
   );
 };

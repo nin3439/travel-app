@@ -1,48 +1,42 @@
 import React from 'react';
-import { fade } from '@material-ui/core/styles';
-import { Search, AccountCircle } from '@material-ui/icons';
+import { Search, AccountCircle, Clear } from '@material-ui/icons';
 import { Link } from 'react-router-dom';
 import {
   AppBar,
   Toolbar,
   Typography,
   IconButton,
-  InputBase,
+  TextField,
   Grid,
+  FormControl,
+  Select,
+  MenuItem,
+  Button,
 } from '@material-ui/core';
 import styled from 'styled-components';
 
-const StyledInputBase = styled(InputBase)`
-  ${({ theme }) => `
-padding: ${theme.spacing(1, 1, 1, 0)};
-transition: ${theme.transitions.create('width')};
-width: 100%
-${theme.breakpoints.up('sm')} {
-  width: 12ch;
-  &:focus {
-    width: 20ch;
-  },
-},
-`}
+const StyledTextField = styled(TextField)`
+  padding: 0 0 0 10px;
+  max-width: 120px;
+  & .MuiInputBase-root {
+    color: #fff;
+  }
 `;
 
 const StyledGrid = styled(Grid)`
-  ${({ theme }) => `
   position: relative;
   display: flex;
   align-items: center;
-  border-radius: ${theme.shape.borderRadius}px;
-  background-color: ${fade(theme.palette.common.white, 0.15)};
-  &:hover {
-    background-color: ${fade(theme.palette.common.white, 0.25)};
-  };
+  border-radius: 4px;
+  background-color: #ffffff2e;
+  transition: all 0.5s;
   margin-left: 20px;
-  width: 100%
-${theme.breakpoints.up('sm')} {
-  margin-left: ${theme.spacing(1)};
-  width: auto;
-},
-`}
+  box-shadow: 0px 0px 1px 0px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%),
+    0px 1px 1px 0px rgb(0 0 0 / 12%);
+  &:hover {
+    background-color: #ffffff43;
+    transition: all 0.5s;
+  }
 `;
 
 const StyledLink = styled(Link)`
@@ -50,7 +44,33 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `;
 
-export const Header: React.FC = () => {
+const StyledButton = styled(Button)`
+  height: 48px;
+  margin-left: -5px;
+  background-color: #2b3d9c;
+  transition: all 0.5s;
+  box-shadow: 0px 0px 1px 0px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%),
+    0px 1px 1px 0px rgb(0 0 0 / 12%);
+  &:hover {
+    transition: all 0.5s;
+    background-color: #1e329c;
+  }
+`;
+
+interface IHeaderProps {
+  searchValue: string;
+  setSearchValue: (searchValue: string) => void;
+}
+
+export const Header: React.FC<IHeaderProps> = ({
+  searchValue,
+  setSearchValue,
+}) => {
+  // const [selectLangValue, setSelectLangValue] = React.useState('');
+
+  // const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
+  //   setSelectLangValue(event.target.value as string);
+  // };
   return (
     <AppBar position="static">
       <Toolbar>
@@ -75,13 +95,38 @@ export const Header: React.FC = () => {
               </Typography>
             </StyledLink>
             <StyledGrid>
-              <Search style={{ pointerEvents: 'none', padding: '0 5px' }} />
-              <StyledInputBase
+              <StyledTextField
                 placeholder="Search…"
                 inputProps={{ 'aria-label': 'search' }}
+                autoFocus={true}
+                value={searchValue}
+                onChange={(e: any) => {
+                  setSearchValue(e.target.value);
+                }}
               />
+              <IconButton onClick={() => setSearchValue('')}>
+                <Clear style={{ color: '#fff' }} />
+              </IconButton>
             </StyledGrid>
+            <StyledButton
+              variant="contained"
+              onClick={(e) => e.preventDefault()}
+            >
+              <Search style={{ color: '#fff' }} />
+            </StyledButton>
           </Grid>
+          <FormControl style={{ margin: '0 10px', color: '#fff' }}>
+            <Select
+              // value={selectLangValue}
+              // onChange={handleChange}
+              displayEmpty
+              style={{ color: '#fff' }}
+            >
+              <MenuItem>English</MenuItem>
+              <MenuItem>Русский</MenuItem>
+              <MenuItem>Белорусский</MenuItem>
+            </Select>
+          </FormControl>
           <IconButton edge="end" color="inherit" aria-label="open drawer">
             <AccountCircle />
           </IconButton>

@@ -4,8 +4,13 @@ import styled from 'styled-components';
 
 const StyledLink = styled(Link)`
   color: #fff;
+  transform: scale(1);
+  transition: all 0.5s;
   &:hover {
     text-decoration: none;
+    transition: all 0.5s;
+    transform: scale(1.1);
+    color: #ccc;
   }
 `;
 
