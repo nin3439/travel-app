@@ -14,6 +14,7 @@ const Countries: any = [
   {
     id: 'cd16166b-f20d-4e37-9513-021e97cfdf96',
     name: 'Italy',
+    capitalID: 3169070,
     capitalLocation: {
       coordinates: [41.902782, 12.496365],
       type: 'Point',
@@ -51,6 +52,7 @@ const Countries: any = [
   {
     id: 'fcc32f88-bde8-41cc-89e7-4174cd7e8ea9',
     name: 'France',
+    capitalID: 2968815,
     capitalLocation: {
       coordinates: [48.85, 2.35],
       type: 'Point',
@@ -88,6 +90,7 @@ const Countries: any = [
   {
     id: '6d4c7a0d-8bd0-4f43-989e-55c253e52ef8',
     name: 'Russia',
+    capitalID: 524894,
     capitalLocation: {
       coordinates: [55.75, 37.616667],
       type: 'Point',
@@ -125,6 +128,7 @@ const Countries: any = [
   {
     id: '9f14a0d1-1649-481b-9a10-f34c8c14ec65',
     name: 'China',
+    capitalID: 1816670,
     capitalLocation: {
       coordinates: [39.916667, 116.383333],
       type: 'Point',
@@ -162,6 +166,7 @@ const Countries: any = [
   {
     id: 'c591d9ef-0b4e-41df-b8cd-4098784f107a',
     name: 'Japan',
+    capitalID: 1850147,
     capitalLocation: {
       coordinates: [35.683333, 139.766667],
       type: 'Point',
@@ -199,6 +204,7 @@ const Countries: any = [
   {
     id: 'bccdb952-9440-4021-ad57-b8bd499f4e64',
     name: 'USA',
+    capitalID: 4140963,
     capitalLocation: {
       coordinates: [38.9101, -77.0147],
       type: 'Point',
@@ -236,6 +242,7 @@ const Countries: any = [
   {
     id: '2cc12f75-d781-4d4f-ab13-c21ee5dd5a8e',
     name: 'Egypt',
+    capitalID: 360630,
     capitalLocation: {
       coordinates: [30.033333, 31.216667],
       type: 'Point',
@@ -273,6 +280,7 @@ const Countries: any = [
   {
     id: '21f7b9ce-7812-46e4-ac76-ed5c40a487c8',
     name: 'Great Britain',
+    capitalID: 2643743,
     capitalLocation: {
       coordinates: [51.5, -0.116667],
       type: 'Point',
@@ -310,6 +318,7 @@ const Countries: any = [
   {
     id: '365f1998-55ff-44b2-b19b-74ff2ae5bf22',
     name: 'Turkey',
+    capitalID: 323784,
     capitalLocation: {
       coordinates: [39, 35],
       type: 'Point',

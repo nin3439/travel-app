@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Grid, Link } from '@material-ui/core';
-import { AUTHORS } from '../constants/Authors';
+import { AUTHORS } from '../constants/authors';
 import styled from 'styled-components';
 
 const StyledLink = styled(Link)`
@@ -49,9 +49,9 @@ export const Footer: React.FC = () => {
             alignItems="center"
             wrap="nowrap"
           >
-            {AUTHORS.map((author) => {
+            {AUTHORS.map((author, index) => {
               return (
-                <Grid item>
+                <Grid item key={index}>
                   <StyledLink href={author.url}> {author.name}</StyledLink>
                 </Grid>
               );

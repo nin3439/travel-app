@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Typography, Grid } from '@material-ui/core';
 import { useRouteMatch } from 'react-router-dom';
 import mockCountries from '../../../models/MockCountries';
@@ -13,6 +13,7 @@ import {
   ZoomControl,
   Placemark,
 } from 'react-yandex-maps';
+import { Widgets } from '../Country/components/Widgets';
 
 interface ICountryProps {
   selectLanguage: string;
@@ -29,7 +30,9 @@ export const Country: React.FC<ICountryProps> = ({
     (item) => item.name === params.country
   );
 
-  setIsMainPageOpen(false);
+  useEffect(() => {
+    setIsMainPageOpen(false);
+  });
 
   if (!country) {
     return <span>Not Found</span>;
@@ -42,6 +45,11 @@ export const Country: React.FC<ICountryProps> = ({
       justify="space-between"
       alignItems="center"
     >
+      <Widgets
+        capitalID={country.capitalID}
+        lang={country.localizations[selectLanguage].lang}
+        capital={country.localizations[selectLanguage].capital}
+      />
       <Typography variant="h3">
         {country.localizations[selectLanguage].name}
       </Typography>
@@ -65,7 +73,10 @@ export const Country: React.FC<ICountryProps> = ({
               <Grid key={index}>
                 <img src={`${photoUrl}`} alt={`${name}`} width="100vw" />
                 <Typography variant="body2" className="legend">
-                  <Typography variant="body1">{`${localizations[selectLanguage].name}`}</Typography>
+                  <Typography
+                    component={'span'}
+                    variant="body1"
+                  >{`${localizations[selectLanguage].name}`}</Typography>
                   {`${localizations[selectLanguage].description}`}
                 </Typography>
               </Grid>

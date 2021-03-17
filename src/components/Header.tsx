@@ -97,7 +97,7 @@ export const Header: React.FC<IHeaderProps> = ({
           >
             <StyledLink to="/">
               <Typography variant="h6" noWrap>
-                Travel-app
+                Dream Travel
               </Typography>
             </StyledLink>
             {isMainPageOpen ? (

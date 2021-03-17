@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Grid, Card, CardContent, Typography } from '@material-ui/core';
 import styled from 'styled-components';
@@ -42,7 +42,10 @@ export const Countries: React.FC<ICountriesProps> = ({
   countries,
   setIsMainPageOpen,
 }) => {
-  setIsMainPageOpen(true);
+  useEffect(() => {
+    setIsMainPageOpen(true);
+  });
+
   return (
     <Grid container direction="row" justify="center" alignItems="center">
       {!countries.length ? (
