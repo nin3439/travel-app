@@ -8,7 +8,8 @@ import { Footer } from './Footer';
 import mockCountries from '../models/MockCountries';
 
 export const Main: React.FC = () => {
-  const [selectLanguage, setselectLanguage] = React.useState('0');
+  const [selectLanguage, setSelectLanguage] = useState('0');
+  const [isMainPageOpen, setIsMainPageOpen] = useState(true);
 
   const countriesMainPage = mockCountries.map((country: any) => {
     return {
@@ -45,17 +46,24 @@ export const Main: React.FC = () => {
           searchValue={searchValue}
           setSearchValue={setSearchValue}
           selectLanguage={selectLanguage}
-          setselectLanguage={setselectLanguage}
+          setSelectLanguage={setSelectLanguage}
+          isMainPageOpen={isMainPageOpen}
         />
         <Grid
           style={{ minHeight: 'calc(100vh - 128px)', padding: '10px 20px' }}
         >
           <Switch>
             <Route exact path="/">
-              <Countries countries={countries} />
+              <Countries
+                countries={countries}
+                setIsMainPageOpen={setIsMainPageOpen}
+              />
             </Route>
-            <Route path="/:string">
-              <Country selectLanguage={selectLanguage} />
+            <Route path="/:country">
+              <Country
+                selectLanguage={selectLanguage}
+                setIsMainPageOpen={setIsMainPageOpen}
+              />
             </Route>
           </Switch>
         </Grid>
