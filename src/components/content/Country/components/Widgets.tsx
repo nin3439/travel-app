@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { getCurrentWeather } from '../../../../api/apiWeather';
+import { getCurrency } from '../../../../api/apiCurrency';
 import { Grid, Typography } from '@material-ui/core';
+import appInterfaces from '../../../../models/AppInterfaces';
 import 'moment/min/locales';
 import moment from 'moment';
 import styled from 'styled-components';
@@ -19,15 +21,23 @@ interface IWidgetsProps {
   capitalID: number;
   lang: string;
   capital: string;
+  currency: string;
+  selectLanguage: string;
 }
 
 export const Widgets: React.FC<IWidgetsProps> = ({
   capitalID,
   capital,
   lang,
+  currency,
+  selectLanguage,
 }) => {
   const [weatherData, setWeatherData] = useState<any>({});
   const [date, setDate] = useState<any>('');
+  const [currencies, setCurrencies] = useState<any>({});
+  useEffect(() => {
+    getCurrency(currency).then((res) => setCurrencies(res));
+  }, [currency]);
 
   useEffect(() => {
     getCurrentWeather(capitalID, lang).then((res) => setWeatherData(res));
@@ -74,6 +84,26 @@ export const Widgets: React.FC<IWidgetsProps> = ({
           </Typography>
           <Typography style={{ marginTop: '10px' }} align="center">
             {date}
+          </Typography>
+        </Grid>
+      )}
+
+      {isEmpty(currencies) ? (
+        ''
+      ) : (
+        <Grid style={{ marginTop: '10px' }}>
+          <Typography align="center">
+            {appInterfaces[selectLanguage][currency]}
+          </Typography>
+          <Typography>
+            {' '}
+            1 {appInterfaces[selectLanguage].USD} - {currencies.USD.toFixed(2)}{' '}
+          </Typography>
+          <Typography>
+            1 {appInterfaces[selectLanguage].EUR} - {currencies.EUR.toFixed(2)}{' '}
+          </Typography>
+          <Typography>
+            1 {appInterfaces[selectLanguage].BYN} - {currencies.BYN.toFixed(2)}{' '}
           </Typography>
         </Grid>
       )}

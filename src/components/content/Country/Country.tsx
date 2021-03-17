@@ -49,6 +49,8 @@ export const Country: React.FC<ICountryProps> = ({
         capitalID={country.capitalID}
         lang={country.localizations[selectLanguage].lang}
         capital={country.localizations[selectLanguage].capital}
+        currency={country.currency}
+        selectLanguage={selectLanguage}
       />
       <Typography variant="h3">
         {country.localizations[selectLanguage].name}
