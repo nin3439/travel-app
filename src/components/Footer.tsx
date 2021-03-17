@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Grid, Link } from '@material-ui/core';
-import { AUTHORS } from '../constants/authors';
+import { AUTHORS } from '../constants/allAuthors';
 import styled from 'styled-components';
 
 const StyledLink = styled(Link)`
