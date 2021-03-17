@@ -5,7 +5,6 @@ export const getCurrentWeather = async (capitalID: number, lang: string) => {
 
   const response = await axios.get(url);
   const data = response.data;
-  console.log(data);
   if (data) {
     return data;
   }
