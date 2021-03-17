@@ -26,17 +26,29 @@ const StyledCard = styled(Card)`
   }
 `;
 
-interface ICountriesProps {
-  countries: any;
+interface ICountry {
+  country: string;
+  name: string;
+  capital: string;
+  imageUrl: string;
 }
 
-export const Countries: React.FC<ICountriesProps> = ({ countries }) => {
+interface ICountriesProps {
+  countries: ICountry[];
+  setIsMainPageOpen: (isMainPageOPen: boolean) => void;
+}
+
+export const Countries: React.FC<ICountriesProps> = ({
+  countries,
+  setIsMainPageOpen,
+}) => {
+  setIsMainPageOpen(true);
   return (
     <Grid container direction="row" justify="center" alignItems="center">
       {!countries.length ? (
         <Typography>Not Found</Typography>
       ) : (
-        countries.map((country: any, index: number) => {
+        countries.map((country: ICountry, index: number) => {
           return (
             <StyledLink to={`/${country.country}`} key={index}>
               <StyledCard>

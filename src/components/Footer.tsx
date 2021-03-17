@@ -1,5 +1,6 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Grid, Link } from '@material-ui/core';
+import { AUTHORS } from '../constants/Authors';
 import styled from 'styled-components';
 
 const StyledLink = styled(Link)`
@@ -48,24 +49,13 @@ export const Footer: React.FC = () => {
             alignItems="center"
             wrap="nowrap"
           >
-            <Grid item>
-              <StyledLink href="https://github.com/kubana6">
-                {' '}
-                kubana-6
-              </StyledLink>
-            </Grid>
-            <Grid item>
-              <StyledLink href="https://github.com/andrei-roh">
-                {' '}
-                andrei-roh
-              </StyledLink>
-            </Grid>
-            <Grid item>
-              <StyledLink href="https://github.com/nin3439">
-                {' '}
-                nin3439
-              </StyledLink>
-            </Grid>
+            {AUTHORS.map((author) => {
+              return (
+                <Grid item>
+                  <StyledLink href={author.url}> {author.name}</StyledLink>
+                </Grid>
+              );
+            })}
           </Grid>
         </Grid>
         <Typography variant="body1" noWrap></Typography>

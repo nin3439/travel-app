@@ -16,14 +16,20 @@ import {
 
 interface ICountryProps {
   selectLanguage: string;
+  setIsMainPageOpen: (isMainPageOPen: boolean) => void;
 }
 
-export const Country: React.FC<ICountryProps> = ({ selectLanguage }) => {
+export const Country: React.FC<ICountryProps> = ({
+  selectLanguage,
+  setIsMainPageOpen,
+}) => {
   const { params } = useRouteMatch();
   const country = mockCountries.find(
     // @ts-ignore
-    (item) => item.name === params.string
+    (item) => item.name === params.country
   );
+
+  setIsMainPageOpen(false);
 
   if (!country) {
     return <span>Not Found</span>;

@@ -1,17 +1,17 @@
 const appInterfaces: any = [
   {
     lang: 'en',
-    placeholder: 'Search',
+    placeholder: 'Search...',
     capital: 'Capital',
   },
   {
     lang: 'ru',
-    placeholder: 'Поиск',
+    placeholder: 'Поиск...',
     capital: 'Столица',
   },
   {
     lang: 'by',
-    placeholder: 'Пошук',
+    placeholder: 'Пошук...',
     capital: 'Сталіца',
   },
 ];
