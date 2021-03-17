@@ -6,6 +6,13 @@ import appInterfaces from '../../../models/AppInterfaces';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import ReactPlayer from 'react-player/lazy';
+import {
+  YMaps,
+  Map,
+  FullscreenControl,
+  ZoomControl,
+  Placemark,
+} from 'react-yandex-maps';
 
 interface ICountryProps {
   selectLanguage: string;
@@ -61,6 +68,22 @@ export const Country: React.FC<ICountryProps> = ({ selectLanguage }) => {
         )}
       </Carousel>
       <ReactPlayer url={country.videoUrl} controls={true} loop={true} />
+      <div style={{ padding: '30px' }}>
+        <YMaps style={{ width: '600px', height: '600px' }}>
+          <Map
+            style={{ width: '600px', height: '600px' }}
+            defaultState={{
+              center: country.capitalLocation.coordinates,
+              zoom: 6,
+              controls: [],
+            }}
+          >
+            <FullscreenControl />
+            <ZoomControl options={{ float: 'right' }} />
+            <Placemark geometry={country.capitalLocation.coordinates} />
+          </Map>
+        </YMaps>
+      </div>
     </Grid>
   );
 };
