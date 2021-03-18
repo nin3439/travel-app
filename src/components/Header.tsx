@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Dispatch, useState } from 'react';
 import { Search, AccountCircle, Clear } from '@material-ui/icons';
 import { Link } from 'react-router-dom';
 import {
@@ -15,6 +15,8 @@ import {
 } from '@material-ui/core';
 import styled from 'styled-components';
 import appInterfaces from '../models/AppInterfaces';
+import { connect } from 'react-redux';
+import { ChangeModalAuth } from '../redux/actions/controlersAction';
 
 const StyledTextField = styled(TextField)`
   padding: 0 0 0 10px;
@@ -63,17 +65,22 @@ interface IHeaderProps {
   setSearchValue: (searchValue: string) => void;
   selectLanguage: string;
   setselectLanguage: (selectLanguage: string) => void;
+  isModalActive: boolean;
+  changeModalActive: () => void;
 }
 
-export const Header: React.FC<IHeaderProps> = ({
+const Header: React.FC<IHeaderProps> = ({
   searchValue,
   setSearchValue,
   selectLanguage,
   setselectLanguage,
+  changeModalActive,
+  isModalActive,
 }) => {
   const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
     setselectLanguage(event.target.value as string);
   };
+  console.log(changeModalActive);
   return (
     <AppBar position="static">
       <Toolbar>
@@ -132,7 +139,14 @@ export const Header: React.FC<IHeaderProps> = ({
               <MenuItem value={2}>Беларуская</MenuItem>
             </Select>
           </FormControl>
-          <IconButton edge="end" color="inherit" aria-label="open drawer">
+          <IconButton
+            onClick={() => {
+              changeModalActive();
+            }}
+            edge="end"
+            color="inherit"
+            aria-label="open drawer"
+          >
             <AccountCircle />
           </IconButton>
         </Grid>
@@ -140,3 +154,25 @@ export const Header: React.FC<IHeaderProps> = ({
     </AppBar>
   );
 };
+const mapStateToProps = (state: any, ownProps: any) => {
+  console.log(ownProps);
+  return {
+    searchValue: ownProps.searchValue,
+    selectLanguage: ownProps.selectLanguage,
+    isModalActive: state.controlers.isModalActive,
+  };
+};
+interface ImapStateToDispatch {
+  changeModalctive: () => void;
+}
+const mapStateToDispatch = (dispatch: Dispatch<any>, ownProps: any) => {
+  return {
+    changeModalActive: () => {
+      const action = ChangeModalAuth();
+      dispatch(action);
+    },
+    setSearchValue: ownProps.setSearchValue,
+    setSelectLanguage: ownProps.setSelectLanguage,
+  };
+};
+export default connect(mapStateToProps, mapStateToDispatch)(Header);
