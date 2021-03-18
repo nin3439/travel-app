@@ -3,10 +3,32 @@ import { Link } from 'react-router-dom';
 import { Grid, Card, CardContent, Typography } from '@material-ui/core';
 import styled from 'styled-components';
 
+const StyledGridWrapper = styled(Grid)`
+  max-width: 20vw;
+  @media (max-width: 650px) {
+    max-width: 54vw;
+  }
+`;
+
+const StyledTypographyCountry = styled(Typography)`
+  font-size: 26px;
+  @media (max-width: 850px) {
+    width: 115px;
+    font-size: 20px;
+  }
+`;
+
 const StyledImage = styled('img')`
   width: 19vw;
   height: 25vh;
   border-radius: 4px;
+  @media (max-width: 850px) {
+    height: 20vh;
+  }
+  @media (max-width: 650px) {
+    width: 170px;
+    height: 18vh;
+  }
 `;
 
 const StyledLink = styled(Link)`
@@ -23,6 +45,9 @@ const StyledCard = styled(Card)`
   margin: 15px;
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  @media (max-width: 850px) {
+    margin: 10px;
   }
 `;
 
@@ -52,7 +77,7 @@ export const Countries: React.FC<ICountriesProps> = ({
       direction="row"
       justify="center"
       alignItems="center"
-      style={{ padding: '5px 10px' }}
+      style={{ padding: '5px 50px' }}
     >
       {!countries.length ? (
         <Typography>Not Found</Typography>
@@ -63,17 +88,18 @@ export const Countries: React.FC<ICountriesProps> = ({
               <StyledCard>
                 <CardContent>
                   <StyledImage src={country.imageUrl} alt={country.name} />
-                  <Grid
+                  <StyledGridWrapper
                     container
                     direction="row"
                     justify="space-between"
                     alignItems="center"
-                    style={{ maxWidth: '20vw' }}
                     wrap="nowrap"
                   >
-                    <Typography variant="h5">{country.name}</Typography>
+                    <StyledTypographyCountry variant="h5">
+                      {country.name}
+                    </StyledTypographyCountry>
                     <Typography>{country.capital}</Typography>
-                  </Grid>
+                  </StyledGridWrapper>
                 </CardContent>
               </StyledCard>
             </StyledLink>
