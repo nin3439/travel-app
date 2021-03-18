@@ -36,12 +36,7 @@ export const Main: React.FC = () => {
 
   return (
     <Router>
-      <Grid
-        container
-        direction="column"
-        justify="space-between"
-        alignItems="center"
-      >
+      <Grid container direction="column" justify="space-between">
         <Header
           searchValue={searchValue}
           setSearchValue={setSearchValue}
@@ -49,9 +44,7 @@ export const Main: React.FC = () => {
           setSelectLanguage={setSelectLanguage}
           isMainPageOpen={isMainPageOpen}
         />
-        <Grid
-          style={{ minHeight: 'calc(100vh - 128px)', padding: '10px 20px' }}
-        >
+        <Grid style={{ minHeight: 'calc(100vh - 128px)' }}>
           <Switch>
             <Route exact path="/">
               <Countries

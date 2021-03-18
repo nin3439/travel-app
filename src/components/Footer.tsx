@@ -17,7 +17,7 @@ const StyledLink = styled(Link)`
 
 export const Footer: React.FC = () => {
   return (
-    <AppBar position="static">
+    <AppBar position="static" style={{ backgroundColor: '#123274' }}>
       <Toolbar>
         <Grid
           container

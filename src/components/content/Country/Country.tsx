@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { Typography, Grid } from '@material-ui/core';
 import { useRouteMatch } from 'react-router-dom';
 import mockCountries from '../../../models/MockCountries';
-import appInterfaces from '../../../models/AppInterfaces';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import ReactPlayer from 'react-player/lazy';
@@ -14,6 +13,7 @@ import {
   Placemark,
 } from 'react-yandex-maps';
 import { Widgets } from '../Country/components/Widgets';
+import { CountryBunner } from './components/CountryBunner';
 
 interface ICountryProps {
   selectLanguage: string;
@@ -45,64 +45,105 @@ export const Country: React.FC<ICountryProps> = ({
       justify="space-between"
       alignItems="center"
     >
-      <Widgets
-        capitalID={country.capitalID}
-        lang={country.localizations[selectLanguage].lang}
+      <CountryBunner
+        name={country.localizations[selectLanguage].name}
         capital={country.localizations[selectLanguage].capital}
-        currency={country.currency}
+        description={country.localizations[selectLanguage].description}
+        image={country.imageUrl}
         selectLanguage={selectLanguage}
       />
-      <Typography variant="h3">
-        {country.localizations[selectLanguage].name}
-      </Typography>
-      <img
-        style={{ border: 'solid #3f51b5 6px' }}
-        width="35%"
-        src={country.imageUrl}
-        alt={country.localizations[selectLanguage].name}
-      />
-      <Typography variant="subtitle1">
-        {appInterfaces[selectLanguage].capital}:
-        {country.localizations[selectLanguage].capital}
-      </Typography>
-      <Typography variant="body1">
-        {country.localizations[selectLanguage].description}
-      </Typography>
-      <Carousel width="60vw">
-        {country.countryPlaces.map(
-          ({ photoUrl, name, localizations }: any, index: number) => {
-            return (
-              <Grid key={index}>
-                <img src={`${photoUrl}`} alt={`${name}`} width="100vw" />
-                <Typography variant="body2" className="legend">
-                  <Typography
-                    component={'span'}
-                    variant="body1"
-                  >{`${localizations[selectLanguage].name}`}</Typography>
-                  {`${localizations[selectLanguage].description}`}
-                </Typography>
-              </Grid>
-            );
-          }
-        )}
-      </Carousel>
-      <ReactPlayer url={country.videoUrl} controls={true} loop={true} />
-      <div style={{ padding: '30px' }}>
-        <YMaps style={{ width: '600px', height: '600px' }}>
-          <Map
-            style={{ width: '600px', height: '600px' }}
-            defaultState={{
-              center: country.capitalLocation.coordinates,
-              zoom: 6,
-              controls: [],
-            }}
-          >
-            <FullscreenControl />
-            <ZoomControl options={{ float: 'right' }} />
-            <Placemark geometry={country.capitalLocation.coordinates} />
-          </Map>
-        </YMaps>
-      </div>
+      <Grid
+        container
+        direction="row"
+        justify="space-between"
+        alignItems="center"
+        style={{ padding: '5vh 0' }}
+      >
+        <Widgets
+          capitalID={country.capitalID}
+          lang={country.localizations[selectLanguage].lang}
+          capital={country.localizations[selectLanguage].capital}
+          currency={country.currency}
+          selectLanguage={selectLanguage}
+        />
+        <Grid style={{ marginRight: '7vw' }}>
+          <YMaps style={{ width: '70vw', height: '70vh' }}>
+            <Map
+              style={{ width: '70vw', height: '70vh' }}
+              defaultState={{
+                center: country.capitalLocation.coordinates,
+                zoom: 6,
+                controls: [],
+              }}
+            >
+              <FullscreenControl />
+              <ZoomControl options={{ float: 'right' }} />
+              <Placemark geometry={country.capitalLocation.coordinates} />
+            </Map>
+          </YMaps>
+        </Grid>
+      </Grid>
+      <Grid
+        container
+        alignItems="center"
+        justify="center"
+        style={{
+          position: 'relative',
+          paddingTop: '56.25%',
+          width: '100%',
+          marginTop: '20px',
+        }}
+      >
+        <ReactPlayer
+          url={country.videoUrl}
+          controls={true}
+          loop={true}
+          width="80%"
+          height="80%"
+          style={{
+            position: 'absolute',
+            top: '0',
+            left: '0',
+            width: '100%',
+            height: '100%',
+            marginLeft: '10%',
+          }}
+        />
+      </Grid>
+      <Grid
+        container
+        alignItems="center"
+        justify="center"
+        style={{
+          marginTop: '-100px',
+          width: '100%',
+        }}
+      >
+        <Carousel
+          width="80vw"
+          autoPlay={true}
+          interval={5000}
+          infiniteLoop={true}
+          stopOnHover={true}
+          transitionTime={2000}
+          useKeyboardArrows={true}
+          showThumbs={true}
+        >
+          {country.countryPlaces.map(
+            ({ photoUrl, name, localizations }: any, index: number) => {
+              return (
+                <Grid key={index}>
+                  <img src={`${photoUrl}`} alt={`${name}`} width="100vw" />
+                  <Typography variant="h5" className="legend">
+                    <Typography variant="body1">{`${localizations[selectLanguage].name}`}</Typography>
+                    {`${localizations[selectLanguage].description}`}
+                  </Typography>
+                </Grid>
+              );
+            }
+          )}
+        </Carousel>
+      </Grid>
     </Grid>
   );
 };
