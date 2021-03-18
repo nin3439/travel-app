@@ -48,13 +48,13 @@ const StyledLink = styled(Link)`
 const StyledButton = styled(Button)`
   height: 48px;
   margin-left: -5px;
-  background-color: #2b3d9c;
+  background-color: #061567;
   transition: all 0.5s;
   box-shadow: 0px 0px 1px 0px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%),
     0px 1px 1px 0px rgb(0 0 0 / 12%);
   &:hover {
     transition: all 0.5s;
-    background-color: #1e329c;
+    background-color: #111a4e;
   }
 `;
 
@@ -78,7 +78,7 @@ export const Header: React.FC<IHeaderProps> = ({
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" style={{ backgroundColor: '#123274' }}>
       <Toolbar>
         <Grid
           container
@@ -112,7 +112,7 @@ export const Header: React.FC<IHeaderProps> = ({
                       setSearchValue(e.target.value);
                     }}
                   />
-                  <IconButton onClick={() => setSearchValue('')}>
+                  <IconButton type="submit" onClick={() => setSearchValue('')}>
                     <Clear style={{ color: '#fff' }} />
                   </IconButton>
                 </StyledGrid>

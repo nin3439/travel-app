@@ -4,8 +4,8 @@ import { Grid, Card, CardContent, Typography } from '@material-ui/core';
 import styled from 'styled-components';
 
 const StyledImage = styled('img')`
-  width: 20vw;
-  height: 21vh;
+  width: 19vw;
+  height: 25vh;
   border-radius: 4px;
 `;
 
@@ -47,7 +47,13 @@ export const Countries: React.FC<ICountriesProps> = ({
   });
 
   return (
-    <Grid container direction="row" justify="center" alignItems="center">
+    <Grid
+      container
+      direction="row"
+      justify="center"
+      alignItems="center"
+      style={{ padding: '5px 10px' }}
+    >
       {!countries.length ? (
         <Typography>Not Found</Typography>
       ) : (

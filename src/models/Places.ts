@@ -139,7 +139,7 @@ const placesItaly = [
     id: 'e9311f52-d389-46be-8305-22df2285dfc9',
     name: 'Colosseum',
     photoUrl:
-      'https://i.pinimg.com/originals/2f/41/0f/2f410fe1933058df5a2879c5d3d24a95.jpg',
+      'https://media.cntraveler.com/photos/58da7b6e1021b64be09794da/1:1/w_2848,h_2848,c_limit/GettyImages-177303568.jpg',
     localizations: [
       {
         lang: 'en',

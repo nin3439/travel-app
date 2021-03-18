@@ -8,13 +8,14 @@ import moment from 'moment';
 import styled from 'styled-components';
 const isEmpty = require('lodash.isempty');
 
-const StyledGrid = styled(Grid)`
-  position: absolute;
-  right: 50px;
-  top: 100px;
-  background-color: #cccccc54;
-  max-width: 140px;
-  border-radius: 4px;
+const StyledGrid = styled(Grid)``;
+
+const StyledGridWidget = styled(Grid)`
+  color: #fff;
+  background-color: #123274;
+  width: 15vw;
+  height: 22vh;
+  padding: 10px;
 `;
 
 interface IWidgetsProps {
@@ -58,55 +59,83 @@ export const Widgets: React.FC<IWidgetsProps> = ({
   }, [date, lang]);
 
   return (
-    <StyledGrid container alignItems="center" justify="center">
-      <Typography variant="body1">{capital}</Typography>
-      {isEmpty(weatherData) ? (
-        ''
-      ) : (
-        <Grid container alignItems="center" justify="center" direction="column">
+    <StyledGrid>
+      <StyledGridWidget
+        container
+        alignItems="center"
+        justify="center"
+        direction="column"
+      >
+        <Typography align="center">{date}</Typography>
+      </StyledGridWidget>
+      <StyledGridWidget
+        container
+        alignItems="center"
+        justify="center"
+        direction="column"
+        style={{ marginTop: '10px' }}
+      >
+        <Typography variant="body1">{capital}</Typography>
+        {isEmpty(weatherData) ? (
+          ''
+        ) : (
           <Grid
             container
-            direction="row"
-            justify="space-around"
             alignItems="center"
+            justify="center"
+            direction="column"
           >
-            <Typography variant="body1">
-              {weatherData.main.temp.toFixed(0)}°C
+            <Grid
+              container
+              direction="row"
+              justify="center"
+              alignItems="center"
+            >
+              <Typography variant="body1" style={{ marginRight: '25px' }}>
+                {weatherData.main.temp.toFixed(0)}°C
+              </Typography>
+              <img
+                src={`http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`}
+                alt={weatherData.weather[0].description}
+              />
+            </Grid>
+            <Typography variant="body1" align="center">
+              {weatherData.weather[0].description}
             </Typography>
-            <img
-              src={`http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`}
-              alt={weatherData.weather[0].description}
-            />
           </Grid>
+        )}
+      </StyledGridWidget>
 
-          <Typography variant="body1" align="center">
-            {weatherData.weather[0].description}
-          </Typography>
-          <Typography style={{ marginTop: '10px' }} align="center">
-            {date}
-          </Typography>
-        </Grid>
-      )}
-
-      {isEmpty(currencies) ? (
-        ''
-      ) : (
-        <Grid style={{ marginTop: '10px' }}>
-          <Typography align="center">
-            {appInterfaces[selectLanguage][currency]}
-          </Typography>
-          <Typography>
-            {' '}
-            1 {appInterfaces[selectLanguage].USD} - {currencies.USD.toFixed(2)}{' '}
-          </Typography>
-          <Typography>
-            1 {appInterfaces[selectLanguage].EUR} - {currencies.EUR.toFixed(2)}{' '}
-          </Typography>
-          <Typography>
-            1 {appInterfaces[selectLanguage].BYN} - {currencies.BYN.toFixed(2)}{' '}
-          </Typography>
-        </Grid>
-      )}
+      <StyledGridWidget
+        container
+        alignItems="center"
+        justify="center"
+        direction="column"
+        style={{ marginTop: '10px' }}
+      >
+        {isEmpty(currencies) ? (
+          ''
+        ) : (
+          <Grid>
+            <Typography align="center" style={{ marginBottom: '10px' }}>
+              {appInterfaces[selectLanguage][currency]}
+            </Typography>
+            <Typography>
+              {' '}
+              1 {appInterfaces[selectLanguage].USD} -{' '}
+              {currencies.USD.toFixed(2)}{' '}
+            </Typography>
+            <Typography>
+              1 {appInterfaces[selectLanguage].EUR} -{' '}
+              {currencies.EUR.toFixed(2)}{' '}
+            </Typography>
+            <Typography>
+              1 {appInterfaces[selectLanguage].BYN} -{' '}
+              {currencies.BYN.toFixed(2)}{' '}
+            </Typography>
+          </Grid>
+        )}
+      </StyledGridWidget>
     </StyledGrid>
   );
 };
