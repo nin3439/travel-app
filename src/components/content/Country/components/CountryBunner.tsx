@@ -83,7 +83,7 @@ export const CountryBunner: React.FC<ICountryBunnerProps> = ({
           <Grid>
             <StyledLink to="/">
               <ArrowBackIos />
-              <Typography>Back to all countries</Typography>
+              <Typography>{appInterfaces[selectLanguage].backTo}</Typography>
             </StyledLink>
           </Grid>
           <Typography variant="h3">{name}</Typography>

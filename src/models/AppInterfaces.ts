@@ -12,6 +12,7 @@ const appInterfaces: any = [
     JPY: 'Japanese yen',
     EGP: 'Egyptian pound',
     GBP: 'Pound sterling',
+    backTo: 'Back to all countries',
   },
   {
     lang: 'ru',
@@ -26,6 +27,7 @@ const appInterfaces: any = [
     JPY: 'Японская иена',
     EGP: 'Египетский фунт',
     GBP: 'Фунт стерлингов',
+    backTo: 'Назад к списку стран',
   },
   {
     lang: 'by',
@@ -40,6 +42,7 @@ const appInterfaces: any = [
     JPY: 'Японская ена',
     EGP: 'Егіпецкі фунт',
     GBP: 'Фунт стэрлінгаў',
+    backTo: 'Назад да спісу краін',
   },
 ];
 

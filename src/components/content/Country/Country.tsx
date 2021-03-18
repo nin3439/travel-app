@@ -11,6 +11,7 @@ import {
   FullscreenControl,
   ZoomControl,
   Placemark,
+  TypeSelector,
 } from 'react-yandex-maps';
 import { Widgets } from '../Country/components/Widgets';
 import { CountryBunner } from './components/CountryBunner';
@@ -78,6 +79,7 @@ export const Country: React.FC<ICountryProps> = ({
             >
               <FullscreenControl />
               <ZoomControl options={{ float: 'right' }} />
+              <TypeSelector options={{ float: 'right' }} />
               <Placemark geometry={country.capitalLocation.coordinates} />
             </Map>
           </YMaps>
