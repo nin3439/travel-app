@@ -8,7 +8,9 @@ import { Footer } from './Footer';
 import mockCountries from '../models/MockCountries';
 
 export const Main: React.FC = () => {
-  const [selectLanguage, setSelectLanguage] = useState('0');
+  const [selectLanguage, setSelectLanguage] = useState(
+    localStorage.getItem('selectedLanguage') || '0'
+  );
   const [isMainPageOpen, setIsMainPageOpen] = useState(true);
 
   const countriesMainPage = mockCountries.map((country: any) => {
@@ -22,6 +24,10 @@ export const Main: React.FC = () => {
 
   const [countries, setCountries] = useState(countriesMainPage);
   const [searchValue, setSearchValue] = useState('');
+
+  useEffect(() => {
+    localStorage.setItem('selectedLanguage', selectLanguage);
+  }, [selectLanguage]);
 
   useEffect(() => {
     const foundCountries = countriesMainPage.filter((country: any) => {

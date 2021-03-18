@@ -8,6 +8,15 @@ import moment from 'moment';
 import styled from 'styled-components';
 const isEmpty = require('lodash.isempty');
 
+const StyledTypography = styled(Typography)`
+  @media (max-width: 850px) {
+    font-size: 14px;
+  }
+  @media (max-width: 750px) {
+    font-size: 12px;
+  }
+`;
+
 const StyledGrid = styled(Grid)``;
 
 const StyledGridWidget = styled(Grid)`
@@ -16,6 +25,9 @@ const StyledGridWidget = styled(Grid)`
   width: 15vw;
   height: 22vh;
   padding: 10px;
+  @media (max-width: 750px) {
+    padding: 2px;
+  }
 `;
 
 interface IWidgetsProps {
@@ -66,7 +78,7 @@ export const Widgets: React.FC<IWidgetsProps> = ({
         justify="center"
         direction="column"
       >
-        <Typography align="center">{date}</Typography>
+        <StyledTypography align="center">{date}</StyledTypography>
       </StyledGridWidget>
       <StyledGridWidget
         container
@@ -75,7 +87,7 @@ export const Widgets: React.FC<IWidgetsProps> = ({
         direction="column"
         style={{ marginTop: '10px' }}
       >
-        <Typography variant="body1">{capital}</Typography>
+        <StyledTypography variant="body1">{capital}</StyledTypography>
         {isEmpty(weatherData) ? (
           ''
         ) : (
@@ -91,17 +103,17 @@ export const Widgets: React.FC<IWidgetsProps> = ({
               justify="center"
               alignItems="center"
             >
-              <Typography variant="body1" style={{ marginRight: '25px' }}>
+              <StyledTypography variant="body1" style={{ marginRight: '25px' }}>
                 {weatherData.main.temp.toFixed(0)}°C
-              </Typography>
+              </StyledTypography>
               <img
                 src={`http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`}
                 alt={weatherData.weather[0].description}
               />
             </Grid>
-            <Typography variant="body1" align="center">
+            <StyledTypography variant="body1" align="center">
               {weatherData.weather[0].description}
-            </Typography>
+            </StyledTypography>
           </Grid>
         )}
       </StyledGridWidget>
@@ -117,22 +129,22 @@ export const Widgets: React.FC<IWidgetsProps> = ({
           ''
         ) : (
           <Grid>
-            <Typography align="center" style={{ marginBottom: '10px' }}>
+            <StyledTypography align="center" style={{ marginBottom: '10px' }}>
               {appInterfaces[selectLanguage][currency]}
-            </Typography>
-            <Typography>
+            </StyledTypography>
+            <StyledTypography>
               {' '}
               1 {appInterfaces[selectLanguage].USD} -{' '}
               {currencies.USD.toFixed(2)}{' '}
-            </Typography>
-            <Typography>
+            </StyledTypography>
+            <StyledTypography>
               1 {appInterfaces[selectLanguage].EUR} -{' '}
               {currencies.EUR.toFixed(2)}{' '}
-            </Typography>
-            <Typography>
+            </StyledTypography>
+            <StyledTypography>
               1 {appInterfaces[selectLanguage].BYN} -{' '}
               {currencies.BYN.toFixed(2)}{' '}
-            </Typography>
+            </StyledTypography>
           </Grid>
         )}
       </StyledGridWidget>

@@ -13,6 +13,7 @@ const appInterfaces: any = [
     EGP: 'Egyptian pound',
     GBP: 'Pound sterling',
     backTo: 'Back to all countries',
+    noFound: 'Not Found',
   },
   {
     lang: 'ru',
@@ -28,6 +29,7 @@ const appInterfaces: any = [
     EGP: 'Египетский фунт',
     GBP: 'Фунт стерлингов',
     backTo: 'Назад к списку стран',
+    noFound: 'Ничего не найдено',
   },
   {
     lang: 'by',
@@ -43,6 +45,7 @@ const appInterfaces: any = [
     EGP: 'Егіпецкі фунт',
     GBP: 'Фунт стэрлінгаў',
     backTo: 'Назад да спісу краін',
+    noFound: 'Нічога не знойдзена',
   },
 ];
 
