@@ -14,15 +14,22 @@
     "@types/react-dom": "^17.0.2",
     "@types/react-redux": "^7.1.16",
     "axios": "^0.21.1",
+<<<<<<< HEAD
     "formik": "^2.2.6",
+=======
+    "lodash.isempty": "^4.4.0",
+    "moment": "^2.29.1",
+>>>>>>> 0ee08d20d6969dad7030e62fd6e10db345cc0227
     "react": "^17.0.1",
     "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^17.0.1",
+    "react-image-gallery": "^1.0.9",
     "react-player": "^2.9.0",
     "react-redux": "^7.2.2",
     "react-responsive-carousel": "^3.2.14",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "react-yandex-maps": "^4.6.0",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "styled-components": "^5.2.1",
@@ -56,6 +63,7 @@
     ]
   },
   "devDependencies": {
+    "@types/lodash.isempty": "^4.4.6",
     "@types/react-custom-scrollbars": "^4.0.7",
     "@types/react-router-dom": "^5.1.7",
     "@types/styled-components": "^5.1.8",

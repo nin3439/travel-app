@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Grid, Card, CardContent, Typography } from '@material-ui/core';
 import styled from 'styled-components';
 
 const StyledImage = styled('img')`
-  width: 20vw;
-  height: 21vh;
+  width: 19vw;
+  height: 25vh;
   border-radius: 4px;
 `;
 
@@ -26,17 +26,38 @@ const StyledCard = styled(Card)`
   }
 `;
 
-interface ICountriesProps {
-  countries: any;
+interface ICountry {
+  country: string;
+  name: string;
+  capital: string;
+  imageUrl: string;
 }
 
-export const Countries: React.FC<ICountriesProps> = ({ countries }) => {
+interface ICountriesProps {
+  countries: ICountry[];
+  setIsMainPageOpen: (isMainPageOPen: boolean) => void;
+}
+
+export const Countries: React.FC<ICountriesProps> = ({
+  countries,
+  setIsMainPageOpen,
+}) => {
+  useEffect(() => {
+    setIsMainPageOpen(true);
+  });
+
   return (
-    <Grid container direction="row" justify="center" alignItems="center">
+    <Grid
+      container
+      direction="row"
+      justify="center"
+      alignItems="center"
+      style={{ padding: '5px 10px' }}
+    >
       {!countries.length ? (
         <Typography>Not Found</Typography>
       ) : (
-        countries.map((country: any, index: number) => {
+        countries.map((country: ICountry, index: number) => {
           return (
             <StyledLink to={`/${country.country}`} key={index}>
               <StyledCard>

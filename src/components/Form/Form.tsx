@@ -102,7 +102,7 @@ const Form: React.FC<any> = ({ registration, login }) => {
     </Box>
   );
 };
-const mapStateToPrps = (state: any) => {
+const mapStateToProps = (state: any) => {
   return {};
 };
-export default connect(mapStateToPrps, { registration, login })(Form);
+export default connect(mapStateToProps, { registration, login })(Form);

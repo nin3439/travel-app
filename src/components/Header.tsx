@@ -50,13 +50,13 @@ const StyledLink = styled(Link)`
 const StyledButton = styled(Button)`
   height: 48px;
   margin-left: -5px;
-  background-color: #2b3d9c;
+  background-color: #061567;
   transition: all 0.5s;
   box-shadow: 0px 0px 1px 0px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%),
     0px 1px 1px 0px rgb(0 0 0 / 12%);
   &:hover {
     transition: all 0.5s;
-    background-color: #1e329c;
+    background-color: #111a4e;
   }
 `;
 
@@ -64,25 +64,26 @@ interface IHeaderProps {
   searchValue: string;
   setSearchValue: (searchValue: string) => void;
   selectLanguage: string;
-  setselectLanguage: (selectLanguage: string) => void;
+  setSelectLanguage: (selectLanguage: string) => void;
   isModalActive: boolean;
   changeModalActive: () => void;
+  isMainPageOpen: boolean;
 }
 
 const Header: React.FC<IHeaderProps> = ({
   searchValue,
   setSearchValue,
   selectLanguage,
-  setselectLanguage,
+  setSelectLanguage,
+  isMainPageOpen,
   changeModalActive,
   isModalActive,
 }) => {
   const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
-    setselectLanguage(event.target.value as string);
+    setSelectLanguage(event.target.value as string);
   };
-  console.log(changeModalActive);
   return (
-    <AppBar position="static">
+    <AppBar position="static" style={{ backgroundColor: '#123274' }}>
       <Toolbar>
         <Grid
           container
@@ -101,36 +102,41 @@ const Header: React.FC<IHeaderProps> = ({
           >
             <StyledLink to="/">
               <Typography variant="h6" noWrap>
-                Travel-app
+                Dream Travel
               </Typography>
             </StyledLink>
-            <StyledGrid>
-              <StyledTextField
-                placeholder={appInterfaces[selectLanguage].placeholder}
-                inputProps={{ 'aria-label': 'search' }}
-                autoFocus={true}
-                value={searchValue}
-                onChange={(e: any) => {
-                  setSearchValue(e.target.value);
-                }}
-              />
-              <IconButton onClick={() => setSearchValue('')}>
-                <Clear style={{ color: '#fff' }} />
-              </IconButton>
-            </StyledGrid>
-            <StyledButton
-              variant="contained"
-              onClick={(e) => e.preventDefault()}
-            >
-              <Search style={{ color: '#fff' }} />
-            </StyledButton>
+            {isMainPageOpen ? (
+              <Grid container direction="row" alignItems="center">
+                <StyledGrid>
+                  <StyledTextField
+                    placeholder={appInterfaces[selectLanguage].placeholder}
+                    inputProps={{ 'aria-label': 'search' }}
+                    autoFocus={true}
+                    value={searchValue}
+                    onChange={(e: any) => {
+                      setSearchValue(e.target.value);
+                    }}
+                  />
+                  <IconButton type="submit" onClick={() => setSearchValue('')}>
+                    <Clear style={{ color: '#fff' }} />
+                  </IconButton>
+                </StyledGrid>
+                <StyledButton
+                  variant="contained"
+                  onClick={(e) => e.preventDefault()}
+                >
+                  <Search style={{ color: '#fff' }} />
+                </StyledButton>
+              </Grid>
+            ) : (
+              ''
+            )}
           </Grid>
           <FormControl style={{ margin: '0 10px', color: '#fff' }}>
             <Select
               value={selectLanguage}
               onChange={handleChange}
-              // displayEmpty
-              style={{ color: '#fff' }}
+              style={{ color: '#fff', width: '120px' }}
             >
               <MenuItem value={0} selected>
                 English
