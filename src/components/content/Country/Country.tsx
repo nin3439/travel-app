@@ -12,7 +12,7 @@ import {
   Placemark,
   TypeSelector,
 } from 'react-yandex-maps';
-import appInterfaces from '../../../models/AppInterfaces';
+import appInterfaces from '../../../constants/AppInterfaces';
 import { Widgets } from '../Country/components/Widgets';
 import { CountryBunner } from './components/CountryBunner';
 import FullscreenIcon from '@material-ui/icons/Fullscreen';
@@ -68,7 +68,7 @@ const Country: React.FC<ICountryProps> = ({
   if (!country) {
     return <span>{appInterfaces[selectLanguage].notFound} </span>;
   }
-
+  console.log();
   return (
     <Grid
       container
@@ -99,13 +99,17 @@ const Country: React.FC<ICountryProps> = ({
         />
         <Grid style={{ marginRight: '7vw' }}>
           <YMaps
-            // query={{
-            //   lang: `${
-            //     country.localizations[selectLanguage].lang === '0'
-            //       ? 'en_US'
-            //       : 'ru_RU'
-            //   }`,
-            // }}
+            key={
+              country.localizations[selectLanguage].lang === 'en'
+                ? 'en_US'
+                : 'ru_RU'
+            }
+            query={{
+              lang:
+                country.localizations[selectLanguage].lang === 'en'
+                  ? 'en_US'
+                  : 'ru_RU',
+            }}
             style={{ width: '70vw', height: '70vh' }}
           >
             <Map

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { getCurrentWeather } from '../../../../api/apiWeather';
 import { getCurrency } from '../../../../api/apiCurrency';
 import { Grid, Typography } from '@material-ui/core';
-import appInterfaces from '../../../../models/AppInterfaces';
+import appInterfaces from '../../../../constants/AppInterfaces';
 import 'moment/min/locales';
 import moment from 'moment';
 import styled from 'styled-components';

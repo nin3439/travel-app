@@ -8,9 +8,15 @@ import { login, registration } from '../../redux/actions/actionAuth';
 import { ChangeModalAuth } from '../../redux/actions/controlersAction';
 import { FormLogin } from './FormLogin/FormLogin';
 import { FormRegistration } from './FormRegistration/FormRegistration';
-
+import appInterfaces from '../../constants/AppInterfaces';
 import { useStyles } from './materialUIStyles';
-const Form: React.FC<any> = ({ ChangeModalAuth, registration, login }) => {
+
+const Form: React.FC<any> = ({
+  ChangeModalAuth,
+  registration,
+  login,
+  selectLanguage,
+}) => {
   const classMaterial: any = useStyles();
   const [imeg, setImeg] = useState<string | unknown>('');
   const [currentEvent, changeEvent] = useState('login');
@@ -60,7 +66,6 @@ const Form: React.FC<any> = ({ ChangeModalAuth, registration, login }) => {
       reader.onerror = (error) => reject(error);
     }).then((imegUrl) => {
       setImeg(imegUrl);
-      console.log(typeof imegUrl);
     });
   };
   return (
@@ -87,7 +92,6 @@ const Form: React.FC<any> = ({ ChangeModalAuth, registration, login }) => {
           onSubmit={onSubmit}
         >
           {(formik: any) => {
-            console.log(formik);
             return (
               <>
                 <div className={classMaterial.changeEvent}>
@@ -101,7 +105,7 @@ const Form: React.FC<any> = ({ ChangeModalAuth, registration, login }) => {
                       changeEvent('login');
                     }}
                   >
-                    Sign In
+                    {appInterfaces[selectLanguage].signInBtn}
                   </Button>
                   <Button
                     className={
@@ -113,14 +117,18 @@ const Form: React.FC<any> = ({ ChangeModalAuth, registration, login }) => {
                       changeEvent('registration');
                     }}
                   >
-                    Sign Up
+                    {appInterfaces[selectLanguage].signUpBtn}
                   </Button>
                 </div>
 
                 {currentEvent === 'registration' ? (
-                  <FormRegistration formik={formik} uploadImeg={uploadImeg} />
+                  <FormRegistration
+                    formik={formik}
+                    uploadImeg={uploadImeg}
+                    selectLanguage={selectLanguage}
+                  />
                 ) : (
-                  <FormLogin formik={formik} />
+                  <FormLogin formik={formik} selectLanguage={selectLanguage} />
                 )}
               </>
             );

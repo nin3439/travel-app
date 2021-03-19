@@ -30,7 +30,6 @@ export const registration = ({
       alert(response.data.message);
       dispatch(ChangeModalAuth());
     } catch (e) {
-      debugger;
       dispatch(changeErrorRegistration(e.response.data.message));
     }
   };

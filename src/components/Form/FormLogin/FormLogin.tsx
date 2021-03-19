@@ -3,21 +3,25 @@ import { Form } from 'formik';
 import { FormikControl } from '../FormikUtils/FormikControl';
 import { useStyles } from './materialUIStyles';
 import { Button } from '@material-ui/core';
-export const FormLogin: React.FC<any> = ({ formik }) => {
+import appInterfaces from '../../../constants/AppInterfaces';
+
+export const FormLogin: React.FC<any> = ({ formik, selectLanguage }) => {
   const classMaterial: any = useStyles();
 
   return (
     <Form className={classMaterial.form}>
-      <h2 className={classMaterial.title}>Sing In</h2>
+      <h2 className={classMaterial.title}>
+        {appInterfaces[selectLanguage].signIn}{' '}
+      </h2>
       <FormikControl
-        placeholder="username"
+        placeholder={appInterfaces[selectLanguage].email}
         control="input"
         type="email"
         name="email"
         className={classMaterial.input}
       />
       <FormikControl
-        placeholder="password"
+        placeholder={appInterfaces[selectLanguage].password}
         control="input"
         type="password"
         name="password"
@@ -29,7 +33,7 @@ export const FormLogin: React.FC<any> = ({ formik }) => {
         type="submit"
         disabled={!formik.isValid}
       >
-        Submit
+        {appInterfaces[selectLanguage].submit}
       </Button>
     </Form>
   );

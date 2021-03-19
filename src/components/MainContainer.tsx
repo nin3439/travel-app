@@ -11,7 +11,22 @@ const MainContainer = (props: any) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <>{props.isLoad ? <img src={preloader} alt="" /> : <Main {...props} />}</>
+    <>
+      {props.isLoad ? (
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: '100vh',
+          }}
+        >
+          <img src={preloader} alt="Preloader" />
+        </div>
+      ) : (
+        <Main {...props} />
+      )}
+    </>
   );
 };
 
