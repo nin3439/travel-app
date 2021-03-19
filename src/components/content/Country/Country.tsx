@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Typography, Grid } from '@material-ui/core';
+import { Typography, Grid, IconButton } from '@material-ui/core';
 import { useRouteMatch } from 'react-router-dom';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
@@ -12,9 +12,36 @@ import {
   Placemark,
   TypeSelector,
 } from 'react-yandex-maps';
+import appInterfaces from '../../../models/AppInterfaces';
 import { Widgets } from '../Country/components/Widgets';
 import { CountryBunner } from './components/CountryBunner';
+import FullscreenIcon from '@material-ui/icons/Fullscreen';
+import { FullScreen, useFullScreenHandle } from 'react-full-screen';
+import styled from 'styled-components';
 import { connect } from 'react-redux';
+
+const StyledGridCarousel = styled(Grid)`
+  position: relative;
+  margin-top: -100px;
+  margin-bottom: 30px;
+  width: 100%;
+  @media (max-width: 1000px) {
+    margin-top: -70px;
+  }
+  @media (max-width: 850px) {
+    margin-top: -50px;
+  }
+  @media (max-width: 650px) {
+    margin-top: -30px;
+  }
+`;
+
+const StyledIconButton = styled(IconButton)`
+  position: absolute;
+  top: 1vh;
+  right: 1vw;
+  z-index: 4;
+`;
 
 interface ICountryProps {
   selectLanguage: string;
@@ -27,6 +54,7 @@ const Country: React.FC<ICountryProps> = ({
   setIsMainPageOpen,
   countriesData,
 }) => {
+  const handle = useFullScreenHandle();
   const { params } = useRouteMatch();
   const country = countriesData.find(
     // @ts-ignore
@@ -38,7 +66,7 @@ const Country: React.FC<ICountryProps> = ({
   });
 
   if (!country) {
-    return <span>Not Found</span>;
+    return <span>{appInterfaces[selectLanguage].notFound} </span>;
   }
 
   return (
@@ -70,7 +98,16 @@ const Country: React.FC<ICountryProps> = ({
           selectLanguage={selectLanguage}
         />
         <Grid style={{ marginRight: '7vw' }}>
-          <YMaps style={{ width: '70vw', height: '70vh' }}>
+          <YMaps
+            // query={{
+            //   lang: `${
+            //     country.localizations[selectLanguage].lang === '0'
+            //       ? 'en_US'
+            //       : 'ru_RU'
+            //   }`,
+            // }}
+            style={{ width: '70vw', height: '70vh' }}
+          >
             <Map
               style={{ width: '70vw', height: '70vh' }}
               defaultState={{
@@ -114,40 +151,37 @@ const Country: React.FC<ICountryProps> = ({
           }}
         />
       </Grid>
-      <Grid
-        container
-        alignItems="center"
-        justify="center"
-        style={{
-          marginTop: '-100px',
-          width: '100%',
-        }}
-      >
-        <Carousel
-          width="80vw"
-          autoPlay={true}
-          interval={5000}
-          infiniteLoop={true}
-          stopOnHover={true}
-          transitionTime={2000}
-          useKeyboardArrows={true}
-          showThumbs={true}
-        >
-          {country.countryPlaces.map(
-            ({ photoUrl, name, localizations }: any, index: number) => {
-              return (
-                <Grid key={index}>
-                  <img src={`${photoUrl}`} alt={`${name}`} width="100vw" />
-                  <Typography variant="h5" className="legend">
-                    <Typography variant="body1">{`${localizations[selectLanguage].name}`}</Typography>
-                    {`${localizations[selectLanguage].description}`}
-                  </Typography>
-                </Grid>
-              );
-            }
-          )}
-        </Carousel>
-      </Grid>
+      <FullScreen handle={handle}>
+        <StyledGridCarousel container alignItems="center" justify="center">
+          <StyledIconButton onClick={handle.enter}>
+            <FullscreenIcon />
+          </StyledIconButton>
+          <Carousel
+            width="80vw"
+            autoPlay={true}
+            interval={5000}
+            infiniteLoop={true}
+            stopOnHover={true}
+            transitionTime={2000}
+            useKeyboardArrows={true}
+            showThumbs={true}
+          >
+            {country.countryPlaces.map(
+              ({ photoUrl, name, localizations }: any, index: number) => {
+                return (
+                  <Grid key={index}>
+                    <img src={`${photoUrl}`} alt={`${name}`} width="100vw" />
+                    <Typography variant="h5" className="legend">
+                      <Typography variant="body1">{`${localizations[selectLanguage].name}`}</Typography>
+                      {`${localizations[selectLanguage].description}`}
+                    </Typography>
+                  </Grid>
+                );
+              }
+            )}
+          </Carousel>
+        </StyledGridCarousel>
+      </FullScreen>
     </Grid>
   );
 };

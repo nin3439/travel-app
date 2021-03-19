@@ -9,7 +9,9 @@ import { Footer } from './Footer';
 import Form from './Form/Form';
 
 export const Main: React.FC<any> = ({ isModalActive, countriesData }) => {
-  const [selectLanguage, setSelectLanguage] = useState('0');
+  const [selectLanguage, setSelectLanguage] = useState(
+    localStorage.getItem('selectedLanguage') || '0'
+  );
   const [isMainPageOpen, setIsMainPageOpen] = useState(true);
   const countriesMainPage = countriesData.map((country: any) => {
     return {
@@ -21,6 +23,10 @@ export const Main: React.FC<any> = ({ isModalActive, countriesData }) => {
   });
   const [countries, setCountries] = useState(countriesMainPage);
   const [searchValue, setSearchValue] = useState('');
+
+  useEffect(() => {
+    localStorage.setItem('selectedLanguage', selectLanguage);
+  }, [selectLanguage]);
 
   useEffect(() => {
     const foundCountries = countriesMainPage.filter((country: any) => {
