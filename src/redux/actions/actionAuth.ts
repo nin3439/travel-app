@@ -5,7 +5,8 @@ import {
   changeErrorRegistration,
   setUser,
 } from '../reducers/auth';
-const baseUrl = 'http://localhost:5000';
+import { ChangeModalAuth } from './controlersAction';
+const baseUrl = 'https://servertravel.herokuapp.com';
 interface Iregistration {
   email: string;
   password: string;
@@ -27,6 +28,7 @@ export const registration = ({
         imeg,
       });
       alert(response.data.message);
+      dispatch(ChangeModalAuth());
     } catch (e) {
       debugger;
       dispatch(changeErrorRegistration(e.response.data.message));
@@ -60,6 +62,7 @@ export const login = ({ email, password }: Ilogin) => {
       });
       localStorage.setItem('token', response.data.token);
       dispatch(setUser(response.data.user));
+      dispatch(ChangeModalAuth());
     } catch (e) {
       dispatch(changeErrorLogin(true));
     }

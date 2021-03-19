@@ -1,15 +1,16 @@
-import { Box } from '@material-ui/core';
-import { Close } from '@material-ui/icons';
-import { Formik } from 'formik';
 import React, { useState } from 'react';
-import { connect } from 'react-redux';
 import * as Yup from 'yup';
+import { connect } from 'react-redux';
+import { Formik } from 'formik';
+import { Box, Button } from '@material-ui/core';
+import { Close } from '@material-ui/icons';
 import { login, registration } from '../../redux/actions/actionAuth';
+import { ChangeModalAuth } from '../../redux/actions/controlersAction';
 import { FormLogin } from './FormLogin/FormLogin';
 import { FormRegistration } from './FormRegistration/FormRegistration';
 
 import { useStyles } from './materialUIStyles';
-const Form: React.FC<any> = ({ registration, login }) => {
+const Form: React.FC<any> = ({ ChangeModalAuth, registration, login }) => {
   const classMaterial: any = useStyles();
   const [imeg, setImeg] = useState<string | unknown>('');
   const [currentEvent, changeEvent] = useState('login');
@@ -49,8 +50,6 @@ const Form: React.FC<any> = ({ registration, login }) => {
     } else {
       registration({ ...values, imeg });
     }
-
-    console.log(registration);
   };
   const uploadImeg = (e: any) => {
     const file = e.target.files[0];
@@ -67,14 +66,18 @@ const Form: React.FC<any> = ({ registration, login }) => {
   return (
     <Box
       className={`${classMaterial.overlay} ${classMaterial.active}`}
-      //   onClick={changeModalActive}
+      onClick={() => {
+        ChangeModalAuth();
+      }}
     >
       <Box className={classMaterial.modal} onClick={(e) => e.stopPropagation()}>
         <Box className={classMaterial.close}>
           <Close
             className={classMaterial.iconClose}
             color="action"
-            // onClick={changeModalActive}
+            onClick={() => {
+              ChangeModalAuth();
+            }}
           />
         </Box>
 
@@ -85,16 +88,41 @@ const Form: React.FC<any> = ({ registration, login }) => {
         >
           {(formik: any) => {
             console.log(formik);
-            // return <FormLogin formik={formik} />;
             return (
-              <div>
+              <>
+                <div className={classMaterial.changeEvent}>
+                  <Button
+                    className={
+                      currentEvent === 'login'
+                        ? classMaterial.buttonActive
+                        : classMaterial.buttonDisabled
+                    }
+                    onClick={() => {
+                      changeEvent('login');
+                    }}
+                  >
+                    Sign In
+                  </Button>
+                  <Button
+                    className={
+                      currentEvent === 'registration'
+                        ? classMaterial.buttonActive
+                        : classMaterial.disabled
+                    }
+                    onClick={() => {
+                      changeEvent('registration');
+                    }}
+                  >
+                    Sign Up
+                  </Button>
+                </div>
+
                 {currentEvent === 'registration' ? (
                   <FormRegistration formik={formik} uploadImeg={uploadImeg} />
                 ) : (
                   <FormLogin formik={formik} />
                 )}
-                ;
-              </div>
+              </>
             );
           }}
         </Formik>
@@ -105,4 +133,9 @@ const Form: React.FC<any> = ({ registration, login }) => {
 const mapStateToProps = (state: any) => {
   return {};
 };
-export default connect(mapStateToProps, { registration, login })(Form);
+
+export default connect(mapStateToProps, {
+  ChangeModalAuth,
+  registration,
+  login,
+})(Form);

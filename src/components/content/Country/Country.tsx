@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { Typography, Grid } from '@material-ui/core';
 import { useRouteMatch } from 'react-router-dom';
-import mockCountries from '../../../models/MockCountries';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import ReactPlayer from 'react-player/lazy';
@@ -15,18 +14,21 @@ import {
 } from 'react-yandex-maps';
 import { Widgets } from '../Country/components/Widgets';
 import { CountryBunner } from './components/CountryBunner';
+import { connect } from 'react-redux';
 
 interface ICountryProps {
   selectLanguage: string;
   setIsMainPageOpen: (isMainPageOPen: boolean) => void;
+  countriesData: any;
 }
 
-export const Country: React.FC<ICountryProps> = ({
+const Country: React.FC<ICountryProps> = ({
   selectLanguage,
   setIsMainPageOpen,
+  countriesData,
 }) => {
   const { params } = useRouteMatch();
-  const country = mockCountries.find(
+  const country = countriesData.find(
     // @ts-ignore
     (item) => item.name === params.country
   );
@@ -149,3 +151,14 @@ export const Country: React.FC<ICountryProps> = ({
     </Grid>
   );
 };
+interface Istate {
+  countries: { countries: {}[] };
+}
+const mapStateToProps = (state: Istate, ownProps: any) => {
+  return {
+    selectLanguage: ownProps.selectLanguage,
+    countriesData: state.countries.countries,
+  };
+};
+
+export default connect(mapStateToProps)(Country);

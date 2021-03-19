@@ -25,7 +25,7 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: 'flex-start',
     alignItems: 'center',
     borderRadius: '4px',
-    backgroundColor: '#fff',
+    backgroundColor: '#123274',
   },
   close: {
     width: '100%',
@@ -55,5 +55,18 @@ export const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     justifyContent: 'space-around',
     alignItems: 'flex-start',
+  },
+  changeEvent: {
+    width: '50%',
+    marginTop: '15px',
+  },
+  buttonActive: {
+    color: '#fff',
+    width: '100px',
+    height: '20px',
+  },
+  buttonDisabled: {
+    width: '100px',
+    height: '20px',
   },
 }));

@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { auth } from '../redux/actions/actionAuth';
+import { loadDataCountries } from '../redux/actions/dataCountry';
 import { Main } from './Main';
-
+import preloader from '../assets/imeg/preloader.svg';
 const MainContainer = (props: any) => {
+  useEffect(() => {
+    props.loadDataCountries();
+    props.auth();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
-    <>
-      <Main {...props} />
-    </>
+    <>{props.isLoad ? <img src={preloader} alt="" /> : <Main {...props} />}</>
   );
 };
 
@@ -17,21 +21,25 @@ interface Iauth {
   isErrorLogin: boolean;
   isErrorRegistration: string;
 }
-interface Icountries {
-  countries: [];
-}
+
 interface Istate {
   controlers: { isModalActive: boolean };
   auth: Iauth;
-  countries: Icountries;
+  countries: { countries: {}[]; isLoad: boolean };
 }
 interface ImapStateReturn {
   isModalActive: boolean;
+  countriesData: {}[];
+  isLoad: boolean;
 }
 const mapStateToProps = (state: Istate): ImapStateReturn => {
   return {
     isModalActive: state.controlers.isModalActive,
+    countriesData: state.countries.countries,
+    isLoad: state.countries.isLoad,
   };
 };
 
-export default connect(mapStateToProps, { auth })(MainContainer);
+export default connect(mapStateToProps, { auth, loadDataCountries })(
+  MainContainer
+);

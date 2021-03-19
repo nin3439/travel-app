@@ -2,37 +2,38 @@ import React from 'react';
 import { Form } from 'formik';
 import { FormikControl } from '../FormikUtils/FormikControl';
 import { useStyles } from './materialUIStyles';
+import { Button } from '@material-ui/core';
 export const FormRegistration: React.FC<any> = ({ formik, uploadImeg }) => {
   const classMaterial: any = useStyles();
 
   return (
     <Form className={classMaterial.form}>
+      <h2>Sign up</h2>
       <FormikControl
+        placeholder="username"
         control="input"
         type="text"
-        label="Name"
         name="name"
         className={classMaterial.input}
       />
       <FormikControl
-        placeholder="username"
+        placeholder="email"
         control="input"
         type="email"
-        label="Email"
         name="email"
         className={classMaterial.input}
       />
       <FormikControl
+        placeholder="password"
         control="input"
         type="password"
-        label="Password"
         name="password"
         className={classMaterial.input}
       />
       <FormikControl
+        placeholder="Confirm Password"
         control="input"
         type="password"
-        label="Confirm Password"
         name="confirmPassword"
         className={classMaterial.input}
       />
@@ -47,9 +48,13 @@ export const FormRegistration: React.FC<any> = ({ formik, uploadImeg }) => {
         />
       </div>
 
-      <button type="submit" disabled={!formik.isValid}>
-        Submit
-      </button>
+      <Button
+        className={classMaterial.button}
+        type="submit"
+        disabled={!formik.isValid}
+      >
+        Sign up
+      </Button>
     </Form>
   );
 };

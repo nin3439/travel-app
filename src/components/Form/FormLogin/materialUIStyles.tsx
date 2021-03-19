@@ -6,10 +6,17 @@ export const useStyles = makeStyles((theme) => ({
   },
   form: {
     width: '100%',
-    height: '100%',
+    height: '200px',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-around',
-    alignItems: 'flex-start',
+    alignItems: 'center',
+    color: '#000',
+  },
+  title: {
+    color: '#fff',
+  },
+  button: {
+    color: '#fff',
   },
 }));

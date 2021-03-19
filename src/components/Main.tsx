@@ -3,22 +3,15 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Grid } from '@material-ui/core';
 import Header from './Header';
 import { Countries } from '../components/content/Countries';
-import { Country } from '../components/content/Country/Country';
+import Country from '../components/content/Country/Country';
 import { Footer } from './Footer';
-import mockCountries from '../models/MockCountries';
+// import mockCountries from '../models/MockCountries';
 import Form from './Form/Form';
 
-<<<<<<< HEAD
-export const Main: React.FC<any> = ({ isModalActive, auth }) => {
-  const [selectLanguage, setselectLanguage] = React.useState('0');
-  const [openForm, changeOpenForm] = useState('false');
-=======
-export const Main: React.FC = () => {
+export const Main: React.FC<any> = ({ isModalActive, countriesData }) => {
   const [selectLanguage, setSelectLanguage] = useState('0');
   const [isMainPageOpen, setIsMainPageOpen] = useState(true);
-
->>>>>>> 0ee08d20d6969dad7030e62fd6e10db345cc0227
-  const countriesMainPage = mockCountries.map((country: any) => {
+  const countriesMainPage = countriesData.map((country: any) => {
     return {
       country: country.name,
       name: country.localizations[selectLanguage].name,
@@ -26,13 +19,9 @@ export const Main: React.FC = () => {
       imageUrl: country.imageUrl,
     };
   });
-
   const [countries, setCountries] = useState(countriesMainPage);
   const [searchValue, setSearchValue] = useState('');
-  useEffect(() => {
-    debugger;
-    auth();
-  }, []);
+
   useEffect(() => {
     const foundCountries = countriesMainPage.filter((country: any) => {
       return (
