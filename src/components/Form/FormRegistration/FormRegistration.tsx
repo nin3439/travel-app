@@ -3,42 +3,48 @@ import { Form } from 'formik';
 import { FormikControl } from '../FormikUtils/FormikControl';
 import { useStyles } from './materialUIStyles';
 import { Button } from '@material-ui/core';
-export const FormRegistration: React.FC<any> = ({ formik, uploadImeg }) => {
+import appInterfaces from '../../../constants/AppInterfaces';
+
+export const FormRegistration: React.FC<any> = ({
+  formik,
+  uploadImeg,
+  selectLanguage,
+}) => {
   const classMaterial: any = useStyles();
 
   return (
     <Form className={classMaterial.form}>
-      <h2>Sign up</h2>
+      <h2>{appInterfaces[selectLanguage].signUp} </h2>
       <FormikControl
-        placeholder="username"
+        placeholder={appInterfaces[selectLanguage].username}
         control="input"
         type="text"
         name="name"
         className={classMaterial.input}
       />
       <FormikControl
-        placeholder="email"
+        placeholder={appInterfaces[selectLanguage].email}
         control="input"
         type="email"
         name="email"
         className={classMaterial.input}
       />
       <FormikControl
-        placeholder="password"
+        placeholder={appInterfaces[selectLanguage].password}
         control="input"
         type="password"
         name="password"
         className={classMaterial.input}
       />
       <FormikControl
-        placeholder="Confirm Password"
+        placeholder={appInterfaces[selectLanguage].confirmPassword}
         control="input"
         type="password"
         name="confirmPassword"
         className={classMaterial.input}
       />
-      <div className={classMaterial.input}>
-        <label>Загрузите фото</label>
+      <div className={classMaterial.inputFile}>
+        <label>{appInterfaces[selectLanguage].photo}</label>
         <input
           placeholder="Upload imeg"
           type="file"
@@ -53,7 +59,7 @@ export const FormRegistration: React.FC<any> = ({ formik, uploadImeg }) => {
         type="submit"
         disabled={!formik.isValid}
       >
-        Sign up
+        {appInterfaces[selectLanguage].signUpBtn}
       </Button>
     </Form>
   );

@@ -13,14 +13,26 @@ import {
   MenuItem,
   Button,
   Avatar,
-  Tooltip,
 } from '@material-ui/core';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import styled from 'styled-components';
-import appInterfaces from '../models/AppInterfaces';
+import appInterfaces from '../constants/AppInterfaces';
 import { connect } from 'react-redux';
 import { ChangeModalAuth } from '../redux/actions/controlersAction';
 import { logout } from '../redux/reducers/auth';
+
+const StyledGridWrapper = styled(Grid)`
+  width: 100%;
+  @media (max-width: 650px) {
+    flex-wrap: wrap;
+  }
+`;
+
+const StyledTypography = styled(Typography)`
+  @media (max-width: 650px) {
+    font-size: 16px;
+  }
+`;
 
 const StyledTextField = styled(TextField)`
   padding: 0 0 0 10px;
@@ -93,13 +105,12 @@ const Header: React.FC<IHeaderProps> = ({
   return (
     <AppBar position="static" style={{ backgroundColor: '#123274' }}>
       <Toolbar>
-        <Grid
+        <StyledGridWrapper
           container
           direction="row"
           justify="space-between"
           alignItems="center"
           wrap="nowrap"
-          style={{ width: '100%' }}
         >
           <Grid
             container
@@ -109,12 +120,12 @@ const Header: React.FC<IHeaderProps> = ({
             wrap="nowrap"
           >
             <StyledLink to="/">
-              <Typography variant="h6" noWrap>
+              <StyledTypography variant="h6" noWrap>
                 Dream Travel
-              </Typography>
+              </StyledTypography>
             </StyledLink>
             {isMainPageOpen ? (
-              <Grid container direction="row" alignItems="center">
+              <Grid container direction="row" alignItems="center" wrap="nowrap">
                 <StyledGrid>
                   <StyledTextField
                     placeholder={appInterfaces[selectLanguage].placeholder}
@@ -140,7 +151,7 @@ const Header: React.FC<IHeaderProps> = ({
               ''
             )}
           </Grid>
-          <FormControl style={{ margin: '0 10px', color: '#fff' }}>
+          <FormControl style={{ margin: '0 40px 0 0 ', color: '#fff' }}>
             <Select
               value={selectLanguage}
               onChange={handleChange}
@@ -154,17 +165,24 @@ const Header: React.FC<IHeaderProps> = ({
             </Select>
           </FormControl>
           {isAuth ? (
-            <>
-              <Avatar src={imeg} />{' '}
-              <Tooltip title="Log_out">
+            <Grid
+              container
+              direction="row"
+              justify="center"
+              alignItems="center"
+              wrap="nowrap"
+              style={{ maxWidth: '100px' }}
+            >
+              <Avatar src={imeg} style={{ margin: '0 0 0 10px' }} />
+              <IconButton>
                 <ExitToAppIcon
-                  color="action"
                   onClick={() => {
                     logout();
                   }}
+                  style={{ color: '#fff' }}
                 />
-              </Tooltip>
-            </>
+              </IconButton>
+            </Grid>
           ) : (
             <IconButton
               onClick={() => {
@@ -174,12 +192,10 @@ const Header: React.FC<IHeaderProps> = ({
               color="inherit"
               aria-label="open drawer"
             >
-              <Tooltip title="Log_out">
-                <AccountCircle />
-              </Tooltip>
+              <AccountCircle />
             </IconButton>
           )}
-        </Grid>
+        </StyledGridWrapper>
       </Toolbar>
     </AppBar>
   );

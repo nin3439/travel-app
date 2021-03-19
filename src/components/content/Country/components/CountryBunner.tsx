@@ -2,7 +2,7 @@ import React from 'react';
 import { Typography, Grid, Divider, Box } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { ArrowBackIos } from '@material-ui/icons';
-import appInterfaces from '../../../../models/AppInterfaces';
+import appInterfaces from '../../../../constants/AppInterfaces';
 import styled from 'styled-components';
 
 const StyledLink = styled(Link)`

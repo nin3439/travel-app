@@ -26,6 +26,12 @@ export const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     borderRadius: '4px',
     backgroundColor: '#123274',
+    [theme.breakpoints.down('md')]: {
+      width: '450px',
+    },
+    [theme.breakpoints.down('sm')]: {
+      width: '230px',
+    },
   },
   close: {
     width: '100%',
@@ -35,7 +41,7 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: 'flex-end',
     alignItems: 'center',
     borderRadius: '4px',
-    marginBottom: '-5px',
+    marginBottom: '30px',
   },
   iconClose: {
     padding: '5px',
@@ -47,6 +53,9 @@ export const useStyles = makeStyles((theme) => ({
   },
   input: {
     width: '50%',
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+    },
   },
   form: {
     width: '100%',
@@ -59,14 +68,21 @@ export const useStyles = makeStyles((theme) => ({
   changeEvent: {
     width: '50%',
     marginTop: '15px',
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      flexDirection: 'column',
+    },
   },
   buttonActive: {
     color: '#fff',
-    width: '100px',
+    maxWidth: '180px',
     height: '20px',
   },
   buttonDisabled: {
-    width: '100px',
+    maxWidth: '180px',
     height: '20px',
   },
 }));

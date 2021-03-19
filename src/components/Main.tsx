@@ -66,7 +66,7 @@ export const Main: React.FC<any> = ({ isModalActive, countriesData }) => {
           </Switch>
         </Grid>
         <Footer />
-        {isModalActive && <Form />}
+        {isModalActive && <Form selectLanguage={selectLanguage} />}
       </Grid>
     </Router>
   );
