@@ -30,6 +30,15 @@ const StyledGridContentBunner = styled(Grid)`
 const StyledGridContent = styled(Grid)`
   padding: 4.375rem 3.75rem 4.375rem 15%;
   background-color: #fff;
+  @media (max-width: 850px) {
+    padding: 2.375rem 1.75rem 2.375rem 15%;
+  }
+`;
+
+const StyledTypographyDesc = styled(Typography)`
+  @media (max-width: 850px) {
+    font-size: 14px;
+  }
 `;
 
 const GridBackground = styled(Grid)`
@@ -98,7 +107,9 @@ export const CountryBunner: React.FC<ICountryBunnerProps> = ({
               margin: '10px 0',
             }}
           />
-          <Typography variant="body1">{description}</Typography>
+          <StyledTypographyDesc variant="body1">
+            {description}
+          </StyledTypographyDesc>
         </StyledGridContent>
       </StyledGridContentBunner>
       <GridBackground>

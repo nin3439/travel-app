@@ -8,16 +8,12 @@ import { Footer } from './Footer';
 import mockCountries from '../models/MockCountries';
 import Form from './Form/Form';
 
-<<<<<<< HEAD
-export const Main: React.FC<any> = ({ isModalActive, auth }) => {
-  const [selectLanguage, setselectLanguage] = React.useState('0');
-  const [openForm, changeOpenForm] = useState('false');
-=======
 export const Main: React.FC = () => {
-  const [selectLanguage, setSelectLanguage] = useState('0');
+  const [selectLanguage, setSelectLanguage] = useState(
+    localStorage.getItem('selectedLanguage') || '0'
+  );
   const [isMainPageOpen, setIsMainPageOpen] = useState(true);
 
->>>>>>> 0ee08d20d6969dad7030e62fd6e10db345cc0227
   const countriesMainPage = mockCountries.map((country: any) => {
     return {
       country: country.name,
@@ -33,6 +29,10 @@ export const Main: React.FC = () => {
     debugger;
     auth();
   }, []);
+  useEffect(() => {
+    localStorage.setItem('selectedLanguage', selectLanguage);
+  }, [selectLanguage]);
+
   useEffect(() => {
     const foundCountries = countriesMainPage.filter((country: any) => {
       return (

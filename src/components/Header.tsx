@@ -18,6 +18,18 @@ import appInterfaces from '../models/AppInterfaces';
 import { connect } from 'react-redux';
 import { ChangeModalAuth } from '../redux/actions/controlersAction';
 
+const StyledGridWrapper = styled(Grid)`
+  @media (max-width: 650px) {
+    flex-wrap: wrap;
+  }
+`;
+
+const StyledTypography = styled(Typography)`
+  @media (max-width: 650px) {
+    font-size: 16px;
+  }
+`;
+
 const StyledTextField = styled(TextField)`
   padding: 0 0 0 10px;
   max-width: 120px;
@@ -85,7 +97,7 @@ const Header: React.FC<IHeaderProps> = ({
   return (
     <AppBar position="static" style={{ backgroundColor: '#123274' }}>
       <Toolbar>
-        <Grid
+        <StyledGridWrapper
           container
           direction="row"
           justify="space-between"
@@ -101,12 +113,12 @@ const Header: React.FC<IHeaderProps> = ({
             wrap="nowrap"
           >
             <StyledLink to="/">
-              <Typography variant="h6" noWrap>
+              <StyledTypography variant="h6" noWrap>
                 Dream Travel
-              </Typography>
+              </StyledTypography>
             </StyledLink>
             {isMainPageOpen ? (
-              <Grid container direction="row" alignItems="center">
+              <Grid container direction="row" alignItems="center" wrap="nowrap">
                 <StyledGrid>
                   <StyledTextField
                     placeholder={appInterfaces[selectLanguage].placeholder}
@@ -155,7 +167,7 @@ const Header: React.FC<IHeaderProps> = ({
           >
             <AccountCircle />
           </IconButton>
-        </Grid>
+        </StyledGridWrapper>
       </Toolbar>
     </AppBar>
   );
