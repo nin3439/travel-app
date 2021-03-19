@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Dispatch } from 'react';
 import { Search, AccountCircle, Clear } from '@material-ui/icons';
 import { Link } from 'react-router-dom';
 import {
@@ -12,21 +12,15 @@ import {
   Select,
   MenuItem,
   Button,
+  Avatar,
+  Tooltip,
 } from '@material-ui/core';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import styled from 'styled-components';
 import appInterfaces from '../models/AppInterfaces';
-
-const StyledGridWrapper = styled(Grid)`
-  @media (max-width: 650px) {
-    flex-wrap: wrap;
-  }
-`;
-
-const StyledTypography = styled(Typography)`
-  @media (max-width: 650px) {
-    font-size: 16px;
-  }
-`;
+import { connect } from 'react-redux';
+import { ChangeModalAuth } from '../redux/actions/controlersAction';
+import { logout } from '../redux/reducers/auth';
 
 const StyledTextField = styled(TextField)`
   padding: 0 0 0 10px;
@@ -75,24 +69,31 @@ interface IHeaderProps {
   setSearchValue: (searchValue: string) => void;
   selectLanguage: string;
   setSelectLanguage: (selectLanguage: string) => void;
+  changeModalActive: () => void;
   isMainPageOpen: boolean;
+  isAuth: boolean;
+  imeg: string;
+  logout: () => void;
 }
 
-export const Header: React.FC<IHeaderProps> = ({
+const Header: React.FC<IHeaderProps> = ({
   searchValue,
   setSearchValue,
   selectLanguage,
   setSelectLanguage,
   isMainPageOpen,
+  changeModalActive,
+  isAuth,
+  imeg,
+  logout,
 }) => {
   const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
     setSelectLanguage(event.target.value as string);
   };
-
   return (
     <AppBar position="static" style={{ backgroundColor: '#123274' }}>
       <Toolbar>
-        <StyledGridWrapper
+        <Grid
           container
           direction="row"
           justify="space-between"
@@ -108,12 +109,12 @@ export const Header: React.FC<IHeaderProps> = ({
             wrap="nowrap"
           >
             <StyledLink to="/">
-              <StyledTypography variant="h6" noWrap>
+              <Typography variant="h6" noWrap>
                 Dream Travel
-              </StyledTypography>
+              </Typography>
             </StyledLink>
             {isMainPageOpen ? (
-              <Grid container direction="row" alignItems="center" wrap="nowrap">
+              <Grid container direction="row" alignItems="center">
                 <StyledGrid>
                   <StyledTextField
                     placeholder={appInterfaces[selectLanguage].placeholder}
@@ -152,11 +153,59 @@ export const Header: React.FC<IHeaderProps> = ({
               <MenuItem value={2}>Беларуская</MenuItem>
             </Select>
           </FormControl>
-          <IconButton edge="end" color="inherit" aria-label="open drawer">
-            <AccountCircle />
-          </IconButton>
-        </StyledGridWrapper>
+          {isAuth ? (
+            <>
+              <Avatar src={imeg} />{' '}
+              <Tooltip title="Log_out">
+                <ExitToAppIcon
+                  color="action"
+                  onClick={() => {
+                    logout();
+                  }}
+                />
+              </Tooltip>
+            </>
+          ) : (
+            <IconButton
+              onClick={() => {
+                changeModalActive();
+              }}
+              edge="end"
+              color="inherit"
+              aria-label="open drawer"
+            >
+              <Tooltip title="Log_out">
+                <AccountCircle />
+              </Tooltip>
+            </IconButton>
+          )}
+        </Grid>
       </Toolbar>
     </AppBar>
   );
 };
+const mapStateToProps = (state: any, ownProps: any) => {
+  return {
+    searchValue: ownProps.searchValue,
+    selectLanguage: ownProps.selectLanguage,
+    isModalActive: state.controlers.isModalActive,
+    isAuth: state.auth.isAuth,
+    imeg: state.auth.currentUser.imeg,
+  };
+};
+
+const mapStateToDispatch = (dispatch: Dispatch<any>, ownProps: any) => {
+  return {
+    changeModalActive: () => {
+      const action = ChangeModalAuth();
+      dispatch(action);
+    },
+    logout: () => {
+      const action = logout();
+      dispatch(action);
+    },
+    setSearchValue: ownProps.setSearchValue,
+    setSelectLanguage: ownProps.setSelectLanguage,
+  };
+};
+export default connect(mapStateToProps, mapStateToDispatch)(Header);

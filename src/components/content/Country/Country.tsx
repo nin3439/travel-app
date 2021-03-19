@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { Typography, Grid, IconButton } from '@material-ui/core';
 import { useRouteMatch } from 'react-router-dom';
-import mockCountries from '../../../models/MockCountries';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import ReactPlayer from 'react-player/lazy';
@@ -19,6 +18,7 @@ import { CountryBunner } from './components/CountryBunner';
 import FullscreenIcon from '@material-ui/icons/Fullscreen';
 import { FullScreen, useFullScreenHandle } from 'react-full-screen';
 import styled from 'styled-components';
+import { connect } from 'react-redux';
 
 const StyledGridCarousel = styled(Grid)`
   position: relative;
@@ -46,15 +46,17 @@ const StyledIconButton = styled(IconButton)`
 interface ICountryProps {
   selectLanguage: string;
   setIsMainPageOpen: (isMainPageOPen: boolean) => void;
+  countriesData: any;
 }
 
-export const Country: React.FC<ICountryProps> = ({
+const Country: React.FC<ICountryProps> = ({
   selectLanguage,
   setIsMainPageOpen,
+  countriesData,
 }) => {
   const handle = useFullScreenHandle();
   const { params } = useRouteMatch();
-  const country = mockCountries.find(
+  const country = countriesData.find(
     // @ts-ignore
     (item) => item.name === params.country
   );
@@ -183,3 +185,14 @@ export const Country: React.FC<ICountryProps> = ({
     </Grid>
   );
 };
+interface Istate {
+  countries: { countries: {}[] };
+}
+const mapStateToProps = (state: Istate, ownProps: any) => {
+  return {
+    selectLanguage: ownProps.selectLanguage,
+    countriesData: state.countries.countries,
+  };
+};
+
+export default connect(mapStateToProps)(Country);

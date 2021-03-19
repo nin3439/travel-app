@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Grid } from '@material-ui/core';
-import { Header } from './Header';
+import Header from './Header';
 import { Countries } from '../components/content/Countries';
-import { Country } from '../components/content/Country/Country';
+import Country from '../components/content/Country/Country';
 import { Footer } from './Footer';
-import mockCountries from '../models/MockCountries';
+// import mockCountries from '../models/MockCountries';
+import Form from './Form/Form';
 
-export const Main: React.FC = () => {
+export const Main: React.FC<any> = ({ isModalActive, countriesData }) => {
   const [selectLanguage, setSelectLanguage] = useState(
     localStorage.getItem('selectedLanguage') || '0'
   );
   const [isMainPageOpen, setIsMainPageOpen] = useState(true);
-
-  const countriesMainPage = mockCountries.map((country: any) => {
+  const countriesMainPage = countriesData.map((country: any) => {
     return {
       country: country.name,
       name: country.localizations[selectLanguage].name,
@@ -21,7 +21,6 @@ export const Main: React.FC = () => {
       imageUrl: country.imageUrl,
     };
   });
-
   const [countries, setCountries] = useState(countriesMainPage);
   const [searchValue, setSearchValue] = useState('');
 
@@ -67,6 +66,7 @@ export const Main: React.FC = () => {
           </Switch>
         </Grid>
         <Footer />
+        {isModalActive && <Form />}
       </Grid>
     </Router>
   );
