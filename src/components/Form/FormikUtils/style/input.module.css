@@ -1,0 +1,8 @@
+.formControl {
+    width:100%;
+    color:#000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
